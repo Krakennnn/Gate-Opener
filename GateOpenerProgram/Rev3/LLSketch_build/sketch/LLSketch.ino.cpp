@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch\\LLSketch.ino"
+#line 1 "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch\\LLSketch.ino"
 #include <AlPlc_Opta.h>
 
 /* opta_1.3.0
@@ -16,14 +16,18 @@ struct PLCSharedVarsOutput_t
 PLCSharedVarsOutput_t& PLCOut = (PLCSharedVarsOutput_t&)m_PLCSharedVarsOutputBuf;
 
 
-AlPlc AxelPLC(1669600778, false);
+AlPlc AxelPLC(766738579, false);
 
 #include <Ethernet.h>
-#line 20 "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch\\LLSketch.ino"
+#include <NTPClient.h>
+EthernetUDP NTPUdp;
+NTPClient timeClient(NTPUdp);
+
+#line 24 "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch\\LLSketch.ino"
 void setup();
-#line 32 "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch\\LLSketch.ino"
+#line 36 "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch\\LLSketch.ino"
 void loop();
-#line 20 "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch\\LLSketch.ino"
+#line 24 "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch\\LLSketch.ino"
 void setup() {
     // Start Ethernet over physical RJ-45 cable
    
@@ -38,6 +42,11 @@ void setup() {
 
 void loop() {
 	delay(1);
+	
+	if (Ethernet.linkStatus() == LinkON) {
+		if (timeClient.update())
+			set_time(timeClient.getEpochTime());
+	}
 	
     // Leave loop running smoothly so USB CDC thread doesn't freeze
 }

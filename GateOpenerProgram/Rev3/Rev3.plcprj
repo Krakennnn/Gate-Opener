@@ -6122,7 +6122,7 @@ END_PROGRAM
 					</config>
 					<RS485 protocol="" mode="0" baudRate="38400" serialMode="none,8,1" slaveAddress="1" COMnumber="2" rsmode="1" netId="0" maxSlaves="32" serCfg="1"/>
 					<CANopen id="0" protocol="" mode="0" nodeID="127" baudRate="250000" hbTime="0" syncCOBID="128" syncCycle="0" networkID="0" slaveNodeID="1" slaveDeviceType="301" slaveSyncCOBID="128" slaveSyncCycle="0" slaveManufacturerDeviceName="" slaveManufacturerHardwareVer="" slaveManufacturerSoftwareVer="" slaveGuardTime="200" slaveLifeTimeFactor="3" slaveConsumerHeartbeatTime="0" slaveProducerHeartbeatTime="0" slaveVendorID="0" slaveProductCode="0" slaveRevisionNumber="0" slaveSerialNumber="0" slaveCfgGranularity="8" slaveCfgCOBIDAutoAssignment="1" slaveCfgMaxTPDONum="8" slaveCfgMaxRPDONum="8"/>
-					<Ethernet protocol="" enableMaster="0" enableSlave="1" enableSlaveRtuGateway="0" rtuGatewayDefaultTimeout="100" slavePort="502" IPAddress="192.168.0.100" subnetMask="255.255.255.0" defaultGateway="196.168.0.1" DNS="196.168.0.1" timeout="5000" enableNTP="0" allowProgrammingConnection="0" connectionMode="static"/>
+					<Ethernet protocol="" enableMaster="0" enableSlave="1" enableSlaveRtuGateway="0" rtuGatewayDefaultTimeout="100" slavePort="502" IPAddress="192.168.0.100" subnetMask="255.255.255.0" defaultGateway="196.168.0.1" DNS="196.168.0.1" timeout="5000" enableNTP="1" allowProgrammingConnection="0" connectionMode="static"/>
 					<Wifi staticConfiguration="0" IPAddress="" subnetMask="" defaultGateway="" DNS="" SSID="" password="" enableNTP="0"/>
 					<SketchContent>
 void setup() {

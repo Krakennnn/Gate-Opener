@@ -1,5 +1,5 @@
-C:\Users\wjas0\Documents\StartOver3\LLSketch_build\sketch\LLSketch.ino.cpp.o: \
- C:\Users\wjas0\Documents\StartOver3\LLSketch_build\sketch\LLSketch.ino.cpp \
+C:\Users\wjas0\Documents\GitHub\Gate-Opener\GateOpenerProgram\Rev3\LLSketch_build\sketch\LLSketch.ino.cpp.o: \
+ C:\Users\wjas0\Documents\GitHub\Gate-Opener\GateOpenerProgram\Rev3\LLSketch_build\sketch\LLSketch.ino.cpp \
  C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\cores\arduino/Arduino.h \
  C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\variants\OPTA/pinmode_arduino.h \
  C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\variants\OPTA/mbed_config.h \
@@ -494,4 +494,6 @@ C:\Users\wjas0\Documents\StartOver3\LLSketch_build\sketch\LLSketch.ino.cpp.o: \
  C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\libraries\WiFi\src/WiFiSSLClient.h \
  C:\Users\wjas0\AppData\Local\T\A\internal\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\Arduino_Portenta_OTA\src/Arduino_Portenta_OTA_QSPI.h \
  C:\Users\wjas0\AppData\Local\T\A\internal\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\Arduino_Portenta_OTA\src/Arduino_Portenta_OTA.h \
- C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\libraries\Ethernet\src/Ethernet.h
+ C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\libraries\Ethernet\src/Ethernet.h \
+ C:\Users\wjas0\AppData\Local\T\A\internal\NTPClient_3.2.1_2a5cb6396268ddb9\NTPClient/NTPClient.h \
+ C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\cores\arduino/api/deprecated/Udp.h

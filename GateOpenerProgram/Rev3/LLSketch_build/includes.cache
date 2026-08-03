@@ -28,9 +28,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -70,7 +70,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -84,9 +84,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -127,7 +127,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -141,9 +141,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -185,7 +185,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -199,9 +199,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -244,7 +244,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -258,9 +258,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -304,7 +304,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -318,9 +318,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
+      "source_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -365,7 +365,7 @@
         "-IC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino/api/deprecated-avr-comp",
         "-iprefixC:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\cores\\arduino",
         "@C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\variants\\OPTA/../OPTA/includes.txt",
-        "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
+        "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\sketch\\LLSketch.ino.cpp",
         "-o",
         "nul"
       ]
@@ -377,8 +377,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\ArduinoRS485_1.1.0_8944d5149e066e7e\\ArduinoRS485\\src\\RS485.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\ArduinoRS485\\RS485.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\ArduinoRS485\\RS485.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\ArduinoRS485\\RS485.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\ArduinoRS485\\RS485.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -435,8 +435,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_DebugUtils_1.5.0_0cbc35381b30f4f0\\Arduino_DebugUtils\\src\\Arduino_DebugUtils.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_DebugUtils\\Arduino_DebugUtils.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_DebugUtils\\Arduino_DebugUtils.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_DebugUtils\\Arduino_DebugUtils.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_DebugUtils\\Arduino_DebugUtils.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -493,8 +493,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\AnalogExpansion.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\AnalogExpansion.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\AnalogExpansion.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\AnalogExpansion.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\AnalogExpansion.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -551,8 +551,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\DigitalExpansion.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalExpansion.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalExpansion.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalExpansion.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalExpansion.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -609,8 +609,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\DigitalMechExpansion.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalMechExpansion.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalMechExpansion.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalMechExpansion.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalMechExpansion.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -667,8 +667,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\DigitalStSolidExpansion.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalStSolidExpansion.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalStSolidExpansion.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalStSolidExpansion.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\DigitalStSolidExpansion.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -725,8 +725,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaAnalog.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaAnalog.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaAnalog.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaAnalog.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaAnalog.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -783,8 +783,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaBlueModule.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaBlueModule.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaBlueModule.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaBlueModule.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaBlueModule.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -841,8 +841,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaController.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaController.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaController.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaController.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaController.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -899,8 +899,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaCrc.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaCrc.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaCrc.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaCrc.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaCrc.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -957,8 +957,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaDigital.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaDigital.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaDigital.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaDigital.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaDigital.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1015,8 +1015,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaExpansion.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaExpansion.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaExpansion.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaExpansion.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaExpansion.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1073,8 +1073,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\OptaMsgCommon.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaMsgCommon.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaMsgCommon.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaMsgCommon.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\OptaMsgCommon.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1131,8 +1131,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Opta_Blueprint_0.2.8_93227687d218b99b\\Arduino_Opta_Blueprint\\src\\utility\\BossaOpta.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\utility\\BossaOpta.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\utility\\BossaOpta.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\utility\\BossaOpta.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Opta_Blueprint\\utility\\BossaOpta.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1189,8 +1189,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\\Arduino_Portenta_OTA\\src\\Arduino_Portenta_OTA.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1247,8 +1247,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\\Arduino_Portenta_OTA\\src\\Arduino_Portenta_OTA_QSPI.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_QSPI.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_QSPI.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_QSPI.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_QSPI.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1305,8 +1305,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\\Arduino_Portenta_OTA\\src\\Arduino_Portenta_OTA_SD.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_SD.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_SD.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_SD.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\Arduino_Portenta_OTA_SD.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1363,8 +1363,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\\Arduino_Portenta_OTA\\src\\decompress\\lzss.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\lzss.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\lzss.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\lzss.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\lzss.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1421,8 +1421,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_Portenta_OTA_1.2.1_db25b9fb896a165c\\Arduino_Portenta_OTA\\src\\decompress\\utility.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\utility.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\utility.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\utility.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_Portenta_OTA\\decompress\\utility.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1479,8 +1479,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\Applet.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Applet.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Applet.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Applet.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Applet.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1537,8 +1537,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\BossaArduino.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaArduino.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaArduino.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaArduino.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaArduino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1595,8 +1595,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\BossaDevice.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaDevice.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaDevice.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaDevice.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\BossaDevice.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1653,8 +1653,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\D2xNvmFlash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D2xNvmFlash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D2xNvmFlash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D2xNvmFlash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D2xNvmFlash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1711,8 +1711,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\D5xNvmFlash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D5xNvmFlash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D5xNvmFlash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D5xNvmFlash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\D5xNvmFlash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1769,8 +1769,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\EefcFlash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EefcFlash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EefcFlash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EefcFlash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EefcFlash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1827,8 +1827,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\EfcFlash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EfcFlash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EfcFlash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EfcFlash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\EfcFlash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1885,8 +1885,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\Flash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1943,8 +1943,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\Flasher.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flasher.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flasher.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flasher.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Flasher.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2001,8 +2001,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\NullFlash.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\NullFlash.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\NullFlash.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\NullFlash.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\NullFlash.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2059,8 +2059,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\Samba.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Samba.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Samba.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Samba.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\Samba.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2117,8 +2117,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\WordCopyApplet.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyApplet.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyApplet.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyApplet.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyApplet.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2175,8 +2175,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\Arduino_SerialUpdater_0.0.1_7d9c8f6383ea4320\\Arduino_SerialUpdater\\src\\WordCopyArm.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyArm.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyArm.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyArm.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Arduino_SerialUpdater\\WordCopyArm.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2233,8 +2233,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\NTPClient_3.2.1_2a5cb6396268ddb9\\NTPClient\\NTPClient.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\NTPClient\\NTPClient.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\NTPClient\\NTPClient.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\NTPClient\\NTPClient.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\NTPClient\\NTPClient.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2291,8 +2291,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\Ethernet\\src\\Ethernet.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Ethernet\\Ethernet.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Ethernet\\Ethernet.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Ethernet\\Ethernet.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Ethernet\\Ethernet.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2349,8 +2349,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\Ethernet\\src\\EthernetServer.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Ethernet\\EthernetServer.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Ethernet\\EthernetServer.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Ethernet\\EthernetServer.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Ethernet\\EthernetServer.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2407,8 +2407,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\AClient.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\AClient.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\AClient.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\AClient.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\AClient.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2465,8 +2465,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\MbedClient.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedClient.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedClient.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedClient.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedClient.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2523,8 +2523,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\MbedSSLClient.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedSSLClient.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedSSLClient.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedSSLClient.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedSSLClient.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2581,8 +2581,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\MbedServer.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedServer.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedServer.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedServer.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedServer.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2639,8 +2639,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\MbedUdp.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedUdp.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\MbedUdp.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedUdp.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\MbedUdp.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2697,8 +2697,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\SocketHelpers.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\SocketHelpers.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\SocketHelpers.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\SocketHelpers.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\SocketHelpers.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2755,8 +2755,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\SocketWrapper\\src\\utility\\http_parser\\http_parser.c",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\utility\\http_parser\\http_parser.c.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\SocketWrapper\\utility\\http_parser\\http_parser.c.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\utility\\http_parser\\http_parser.c.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\SocketWrapper\\utility\\http_parser\\http_parser.c.d"
     },
     "compile_task": {
       "args": [
@@ -2813,8 +2813,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\Wire\\Wire.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Wire\\Wire.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\Wire\\Wire.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Wire\\Wire.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\Wire\\Wire.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2871,8 +2871,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\STM32H747_System\\src\\Nicla_Vision_System.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\Nicla_Vision_System.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\Nicla_Vision_System.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\Nicla_Vision_System.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\Nicla_Vision_System.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2929,8 +2929,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\STM32H747_System\\src\\Portenta_System.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\Portenta_System.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\Portenta_System.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\Portenta_System.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\Portenta_System.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -2987,8 +2987,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\STM32H747_System\\src\\STM32H747_System.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\STM32H747_System.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\STM32H747_System\\STM32H747_System.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\STM32H747_System.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\STM32H747_System\\STM32H747_System.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -3045,8 +3045,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\WiFi\\src\\WiFi.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\WiFi\\WiFi.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\WiFi\\WiFi.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\WiFi\\WiFi.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\WiFi\\WiFi.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -3103,8 +3103,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\wjas0\\AppData\\Local\\T\\A\\internal\\arduino_mbed_opta_4.5.0_60e358df9553369a\\libraries\\WiFi\\src\\WiFiServer.cpp",
-      "object_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\WiFi\\WiFiServer.cpp.o",
-      "depfile_path": "C:\\Users\\wjas0\\Documents\\StartOver3\\LLSketch_build\\libraries\\WiFi\\WiFiServer.cpp.d"
+      "object_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\WiFi\\WiFiServer.cpp.o",
+      "depfile_path": "C:\\Users\\wjas0\\Documents\\GitHub\\Gate-Opener\\GateOpenerProgram\\Rev3\\LLSketch_build\\libraries\\WiFi\\WiFiServer.cpp.d"
     },
     "compile_task": {
       "args": [

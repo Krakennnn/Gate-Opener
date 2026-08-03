@@ -1,4 +1,4 @@
-C:\Users\wjas0\Documents\StartOver3\LLSketch_build\libraries\NTPClient\NTPClient.cpp.o: \
+C:\Users\wjas0\Documents\GitHub\Gate-Opener\GateOpenerProgram\Rev3\LLSketch_build\libraries\NTPClient\NTPClient.cpp.o: \
  C:\Users\wjas0\AppData\Local\T\A\internal\NTPClient_3.2.1_2a5cb6396268ddb9\NTPClient\NTPClient.cpp \
  C:\Users\wjas0\AppData\Local\T\A\internal\NTPClient_3.2.1_2a5cb6396268ddb9\NTPClient\NTPClient.h \
  C:\Users\wjas0\AppData\Local\T\A\internal\arduino_mbed_opta_4.5.0_60e358df9553369a\cores\arduino/Arduino.h \

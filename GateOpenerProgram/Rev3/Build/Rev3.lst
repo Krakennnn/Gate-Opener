@@ -39,18 +39,18 @@ END_PROGRAM
 #3			(* CloseRelay_Mod := CloseRelay; *)
 #4			MOVE		CloseRelay,CloseRelay_Mod	{LNXT:23|24|-1}
 (*) UDINT
-3001E55A  F8DF 73A8		ldr r7, [pc, #+936] ; 0x24020F98
+3001E55A  F8DF 73A8		ldr r7, [pc, #+936] ; 0x240212F8
 3001E55E  7838     		ldrb r0, [r7]
-3001E560  F8DF 7394		ldr r7, [pc, #+916] ; 0x2401F2C8
+3001E560  F8DF 7394		ldr r7, [pc, #+916] ; 0x2401F628
 3001E564  7038     		strb r0, [r7]
 
 #5		
 #6			(* OpenRelay_Mod := OpenRelay; *)
 #7			MOVE		OpenRelay,OpenRelay_Mod	{LNXT:24|25|-1}
 (*) BOOL
-3001E566  F8DF 73A0		ldr r7, [pc, #+928] ; 0x24020F99
+3001E566  F8DF 73A0		ldr r7, [pc, #+928] ; 0x240212F9
 3001E56A  7838     		ldrb r0, [r7]
-3001E56C  F8DF 738C		ldr r7, [pc, #+908] ; 0x2401F2CA
+3001E56C  F8DF 738C		ldr r7, [pc, #+908] ; 0x2401F62A
 3001E570  7038     		strb r0, [r7]
 
 #8		
@@ -59,7 +59,7 @@ END_PROGRAM
 (*) BOOL
 3001E572  F8DF 7350		ldr r7, [pc, #+848] ; 0x200002A6
 3001E576  F9B7 0000		ldrsh r0, [r7]
-3001E57A  F8DF 7384		ldr r7, [pc, #+900] ; 0x2401F2CC
+3001E57A  F8DF 7384		ldr r7, [pc, #+900] ; 0x2401F62C
 3001E57E  8038     		strh r0, [r7]
 
 #11		
@@ -77,7 +77,7 @@ END_PROGRAM
 
 #15			AND		RF_Input	{LNXT:28|29|-1}
 (*) BOOL
-3001E590  F8DF 7378		ldr r7, [pc, #+888] ; 0x24020F9C
+3001E590  F8DF 7378		ldr r7, [pc, #+888] ; 0x240212FC
 3001E594  783F     		ldrb r7, [r7]
 3001E596  4038     		and r0, r0, r7
 
@@ -90,7 +90,7 @@ END_PROGRAM
 #18			(* RF_Last := RF_Input; *)
 #19			MOVE		RF_Input,RF_Last	{LNXT:29|32|-1}
 (*) BOOL
-3001E59E  F8DF 736C		ldr r7, [pc, #+876] ; 0x24020F9C
+3001E59E  F8DF 736C		ldr r7, [pc, #+876] ; 0x240212FC
 3001E5A2  7838     		ldrb r0, [r7]
 3001E5A4  F8DF 7320		ldr r7, [pc, #+800] ; 0x200002B0
 3001E5A8  7038     		strb r0, [r7]
@@ -829,7 +829,7 @@ END_PROGRAM
 #305				MOVE		TRUE,OpenRelay	{LNXT:130|131|-1}
 (*) BOOL
 3001E87E  2001     		mov r0, #1 ; 1
-3001E880  F8DF 7084		ldr r7, [pc, #+132] ; 0x24020F99
+3001E880  F8DF 7084		ldr r7, [pc, #+132] ; 0x240212F9
 3001E884  7038     		strb r0, [r7]
 
 #306		
@@ -837,7 +837,7 @@ END_PROGRAM
 #308				MOVE		FALSE,CloseRelay	{LNXT:131|23|-1}
 (*) BOOL
 3001E886  2000     		mov r0, #0 ; 0
-3001E888  F8DF 7078		ldr r7, [pc, #+120] ; 0x24020F98
+3001E888  F8DF 7078		ldr r7, [pc, #+120] ; 0x240212F8
 3001E88C  7038     		strb r0, [r7]
 
 #309				JMP		$label19	{LNXT:130|23|-1}
@@ -851,7 +851,7 @@ END_PROGRAM
 #313				MOVE		FALSE,OpenRelay	{LNXT:133|134|-1}
 (*) BOOL
 3001E892  2000     		mov r0, #0 ; 0
-3001E894  F8DF 7070		ldr r7, [pc, #+112] ; 0x24020F99
+3001E894  F8DF 7070		ldr r7, [pc, #+112] ; 0x240212F9
 3001E898  7038     		strb r0, [r7]
 
 #314		
@@ -859,7 +859,7 @@ END_PROGRAM
 #316				MOVE		TRUE,CloseRelay	{LNXT:134|23|-1}
 (*) BOOL
 3001E89A  2001     		mov r0, #1 ; 1
-3001E89C  F8DF 7064		ldr r7, [pc, #+100] ; 0x24020F98
+3001E89C  F8DF 7064		ldr r7, [pc, #+100] ; 0x240212F8
 3001E8A0  7038     		strb r0, [r7]
 
 #317				JMP		$label19	{LNXT:133|23|-1}
@@ -873,7 +873,7 @@ END_PROGRAM
 #321				MOVE		FALSE,OpenRelay	{LNXT:136|137|-1}
 (*) BOOL
 3001E8A6  2000     		mov r0, #0 ; 0
-3001E8A8  F8DF 705C		ldr r7, [pc, #+92] ; 0x24020F99
+3001E8A8  F8DF 705C		ldr r7, [pc, #+92] ; 0x240212F9
 3001E8AC  7038     		strb r0, [r7]
 
 #322		
@@ -881,7 +881,7 @@ END_PROGRAM
 #324				MOVE		FALSE,CloseRelay	{LNXT:137|23|-1}
 (*) BOOL
 3001E8AE  2000     		mov r0, #0 ; 0
-3001E8B0  F8DF 7050		ldr r7, [pc, #+80] ; 0x24020F98
+3001E8B0  F8DF 7050		ldr r7, [pc, #+80] ; 0x240212F8
 3001E8B4  7038     		strb r0, [r7]
 
 3001E8B6  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
@@ -903,12 +903,12 @@ END_PROGRAM
 3001E8EC  200002C0		; 0x200002C0
 3001E8F0  200002C2		; 0x200002C2
 3001E8F4  200002C4		; 0x200002C4
-3001E8F8  FFFFFFFF		; 0x2401F2C8
-3001E8FC  FFFFFFFF		; 0x2401F2CA
-3001E900  FFFFFFFF		; 0x2401F2CC
-3001E904  FFFFFFFF		; 0x24020F98
-3001E908  FFFFFFFF		; 0x24020F99
-3001E90C  FFFFFFFF		; 0x24020F9C
+3001E8F8  FFFFFFFF		; 0x2401F628
+3001E8FC  FFFFFFFF		; 0x2401F62A
+3001E900  FFFFFFFF		; 0x2401F62C
+3001E904  FFFFFFFF		; 0x240212F8
+3001E908  FFFFFFFF		; 0x240212F9
+3001E90C  FFFFFFFF		; 0x240212FC
 
 END_PROGRAM
 
@@ -973,13 +973,13 @@ END_PROGRAM
 #6			(* warningsKiller := sysDBase_SetExtTable( TO_DWORD( ADR($$ParDB) ), $$ParDBLength, 200, TO_DWORD( ADR(%MW200.0) ), 3, 2, 201, 0, 0, 2, 2642176270 ); *)
 #7			ADR		%MW200.0	{LNXT:5|3|-1}
 (*) UDINT
-3001E946  F8DF 0070		ldr r0, [pc, #+112] ; 0x2401F2C8
+3001E946  F8DF 0070		ldr r0, [pc, #+112] ; 0x2401F628
 
 #8			TO_DWORD	{LNXT:5|3|-1}
 (-) @WORD
 #9			ST		$$TMP3	{LNXT:5|3|-1}
 (*) DWORD
-3001E94A  F8DF 7068		ldr r7, [pc, #+104] ; 0x200002AC
+3001E94A  F8DF 7068		ldr r7, [pc, #+104] ; 0x200002DC
 3001E94E  6038     		str r0, [r7]
 
 #10			ADR		$$ParDB	{LNXT:5|3|-1}
@@ -995,7 +995,7 @@ END_PROGRAM
 3001E958  4639     		mov r1, r7
 3001E95A  27C8     		mov r7, #200 ; 200
 3001E95C  463A     		mov r2, r7
-3001E95E  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002AC
+3001E95E  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002DC
 3001E962  683B     		ldr r3, [r7]
 3001E964  2703     		mov r7, #3 ; 3
 3001E966  F8CD 7000		str r7, [sp]
@@ -1012,7 +1012,7 @@ END_PROGRAM
 3001E988  F8DF 7034		ldr r7, [pc, #+52] ; 0x9D7C690E
 3001E98C  463F     		mov r7, r7
 3001E98E  F8CD 7018		str r7, [sp, #+24]
-3001E992  F8DF 4014		ldr r4, [pc, #+20] ; 0x80812D5
+3001E992  F8DF 4014		ldr r4, [pc, #+20] ; 0x8081D49
 3001E996  F044 0401		orr r4, r4, #1
 3001E99A  47A0     		blx r4
 3001E99C  B008     		add sp, sp, #32
@@ -1024,11 +1024,11 @@ END_PROGRAM
 
 3001E9A4  E00E     		b #28
 
-3001E9A8  FFFFFFFF		; 0x080812D5
+3001E9A8  FFFFFFFF		; 0x08081D49
 3001E9AC  200002A5		; 0x200002A5
 3001E9B0  200002A8		; 0x200002A8
-3001E9B4  200002AC		; 0x200002AC
-3001E9B8  FFFFFFFF		; 0x2401F2C8
+3001E9B4  200002DC		; 0x200002DC
+3001E9B8  FFFFFFFF		; 0x2401F628
 3001E9BC  3001E4A0		; 0x3001E4A0
 3001E9C0  9D7C690E		; 0x9D7C690E
 
@@ -1054,7 +1054,7 @@ END_PROGRAM
 #5			sysCfgAnalogRes	{LNXT:4|7|-1}
 (*) USINT
 3001E9C4  2010     		mov r0, #16 ; 16
-3001E9C6  F8DF 40BC		ldr r4, [pc, #+188] ; 0x8087145
+3001E9C6  F8DF 40BC		ldr r4, [pc, #+188] ; 0x8087BBD
 3001E9CA  F044 0401		orr r4, r4, #1
 3001E9CE  47A0     		blx r4
 
@@ -1071,7 +1071,7 @@ END_PROGRAM
 (*) USINT
 3001E9D6  2000     		mov r0, #0 ; 0
 3001E9D8  2100     		mov r1, #0 ; 0
-3001E9DA  F8DF 40AC		ldr r4, [pc, #+172] ; 0x8087151
+3001E9DA  F8DF 40AC		ldr r4, [pc, #+172] ; 0x8087BC9
 3001E9DE  F044 0401		orr r4, r4, #1
 3001E9E2  47A0     		blx r4
 
@@ -1088,7 +1088,7 @@ END_PROGRAM
 (*) USINT
 3001E9EA  2001     		mov r0, #1 ; 1
 3001E9EC  2100     		mov r1, #0 ; 0
-3001E9EE  F8DF 4098		ldr r4, [pc, #+152] ; 0x8087151
+3001E9EE  F8DF 4098		ldr r4, [pc, #+152] ; 0x8087BC9
 3001E9F2  F044 0401		orr r4, r4, #1
 3001E9F6  47A0     		blx r4
 
@@ -1105,7 +1105,7 @@ END_PROGRAM
 (*) USINT
 3001E9FE  2002     		mov r0, #2 ; 2
 3001EA00  2100     		mov r1, #0 ; 0
-3001EA02  F8DF 4084		ldr r4, [pc, #+132] ; 0x8087151
+3001EA02  F8DF 4084		ldr r4, [pc, #+132] ; 0x8087BC9
 3001EA06  F044 0401		orr r4, r4, #1
 3001EA0A  47A0     		blx r4
 
@@ -1122,7 +1122,7 @@ END_PROGRAM
 (*) USINT
 3001EA12  2003     		mov r0, #3 ; 3
 3001EA14  2100     		mov r1, #0 ; 0
-3001EA16  F8DF 4070		ldr r4, [pc, #+112] ; 0x8087151
+3001EA16  F8DF 4070		ldr r4, [pc, #+112] ; 0x8087BC9
 3001EA1A  F044 0401		orr r4, r4, #1
 3001EA1E  47A0     		blx r4
 
@@ -1139,7 +1139,7 @@ END_PROGRAM
 (*) USINT
 3001EA26  2004     		mov r0, #4 ; 4
 3001EA28  2100     		mov r1, #0 ; 0
-3001EA2A  F8DF 405C		ldr r4, [pc, #+92] ; 0x8087151
+3001EA2A  F8DF 405C		ldr r4, [pc, #+92] ; 0x8087BC9
 3001EA2E  F044 0401		orr r4, r4, #1
 3001EA32  47A0     		blx r4
 
@@ -1156,7 +1156,7 @@ END_PROGRAM
 (*) USINT
 3001EA3A  2005     		mov r0, #5 ; 5
 3001EA3C  2100     		mov r1, #0 ; 0
-3001EA3E  F8DF 4048		ldr r4, [pc, #+72] ; 0x8087151
+3001EA3E  F8DF 4048		ldr r4, [pc, #+72] ; 0x8087BC9
 3001EA42  F044 0401		orr r4, r4, #1
 3001EA46  47A0     		blx r4
 
@@ -1173,7 +1173,7 @@ END_PROGRAM
 (*) USINT
 3001EA4E  2006     		mov r0, #6 ; 6
 3001EA50  2100     		mov r1, #0 ; 0
-3001EA52  F8DF 4034		ldr r4, [pc, #+52] ; 0x8087151
+3001EA52  F8DF 4034		ldr r4, [pc, #+52] ; 0x8087BC9
 3001EA56  F044 0401		orr r4, r4, #1
 3001EA5A  47A0     		blx r4
 
@@ -1190,7 +1190,7 @@ END_PROGRAM
 (*) USINT
 3001EA62  2007     		mov r0, #7 ; 7
 3001EA64  2100     		mov r1, #0 ; 0
-3001EA66  F8DF 4020		ldr r4, [pc, #+32] ; 0x8087151
+3001EA66  F8DF 4020		ldr r4, [pc, #+32] ; 0x8087BC9
 3001EA6A  F044 0401		orr r4, r4, #1
 3001EA6E  47A0     		blx r4
 
@@ -1205,8 +1205,8 @@ END_PROGRAM
 
 3001EA80  4770     		bx lr
 
-3001EA84  FFFFFFFF		; 0x08087145
-3001EA88  FFFFFFFF		; 0x08087151
+3001EA84  FFFFFFFF		; 0x08087BBD
+3001EA88  FFFFFFFF		; 0x08087BC9
 3001EA8C  200002A4		; 0x200002A4
 
 END_PROGRAM
@@ -1341,8 +1341,8 @@ End code area:            		000000003001EC98h
 Code size:                		00000898h
 
 Start local data area:    		0000000020000298h
-End local data area:      		00000000200002C6h
-Local data size:          		0000002Eh
+End local data area:      		00000000200002E0h
+Local data size:          		00000048h
 
 Start retentive data area:		000000003800F800h
 End retentive data area:  		000000003800F800h
@@ -1355,7 +1355,7 @@ Bit data size:            		00000000h
 
 
 ********************************************
-CODE ID:                                88DDD110
+CODE ID:                                2C9958D1
 DEBUG MEMO ID:                          3001E91E
-FULL MEMO ID:                           0000202E
+FULL MEMO ID:                           0000B7EE
 ********************************************
