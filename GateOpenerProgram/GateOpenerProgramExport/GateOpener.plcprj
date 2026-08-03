@@ -81,12 +81,6 @@
 					<var name="CloseRelay" type="BOOL">
 						<address type="Q" typeVar="X" index="0" subIndex="1"/>
 					</var>
-					<var name="OpenRelay_2" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="2"/>
-					</var>
-					<var name="CloseRelay_2" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="3"/>
-					</var>
 				</group>
 				<group name="I_O_mappings_ProgInp" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="RF_Input" type="BOOL">
@@ -113,7 +107,7 @@
 			<functions/>
 			<functionBlocks/>
 			<programs>
-				<program name="GateControl" version="1.0.0" creationDate="1771033556" lastModifiedDate="1785702302" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<program name="GateControl" version="1.0.0" creationDate="1771033556" lastModifiedDate="1777838725" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
 					<vars/>
 					<iecDeclaration active="FALSE"/>
 					<sourceCode type="ST">
@@ -238,22 +232,16 @@ END_IF;
 CASE GateState OF
 
     2:  (* OPENING *)
-        OpenRelay    := TRUE;
-        CloseRelay   := FALSE;
-        OpenRelay_2  := TRUE;
-        CloseRelay_2 := FALSE;
+        OpenRelay := TRUE;
+        CloseRelay := FALSE;
 
     3:  (* CLOSING *)
-        OpenRelay    := FALSE;
-        CloseRelay   := TRUE;
-        OpenRelay_2  := FALSE;
-        CloseRelay_2 := TRUE;
+        OpenRelay := FALSE;
+        CloseRelay := TRUE;
 
     ELSE
-        OpenRelay    := FALSE;
-        CloseRelay   := FALSE;
-        OpenRelay_2  := FALSE;
-        CloseRelay_2 := FALSE;
+        OpenRelay := FALSE;
+        CloseRelay := FALSE;
 
 END_CASE;
 ]]>
@@ -5896,7 +5884,7 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="GateOpener" nextID="337">
+			<root name="GateOpener" nextID="297">
 				<GlobalVars name="Global_vars" id="2"/>
 				<GlobalVars name="I_O_mappings_LEDOut" id="5"/>
 				<GlobalVars name="I_O_mappings_RelayOut" id="70"/>

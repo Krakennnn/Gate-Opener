@@ -10,16 +10,16 @@
 **************************************************
 
 $$MOD:
-300000B0  FB90 F3F1		sdiv r3, r0, r1
-300000B4  4359     		mul r1, r1, r3
-300000B6  EBC1 0000		rsb r0, r1, r0
-300000BA  4770     		bx lr
+3001E4B0  FB90 F3F1		sdiv r3, r0, r1
+3001E4B4  4359     		mul r1, r1, r3
+3001E4B6  EBC1 0000		rsb r0, r1, r0
+3001E4BA  4770     		bx lr
 
 $$MOD_U:
-300000BC  FBB0 F3F1		udiv r3, r0, r1
-300000C0  4359     		mul r1, r1, r3
-300000C2  EBC1 0000		rsb r0, r1, r0
-300000C6  4770     		bx lr
+3001E4BC  FBB0 F3F1		udiv r3, r0, r1
+3001E4C0  4359     		mul r1, r1, r3
+3001E4C2  EBC1 0000		rsb r0, r1, r0
+3001E4C6  4770     		bx lr
 
 **************************************************
 	List program: GateControl
@@ -29,9 +29,9 @@ PROGRAM GateControl
 
 END_PROGRAM
 
-300000D0  B082     		sub sp, sp, #8
-300000D2  F8CD E000		str lr, [sp]
-300000D6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E4D0  B082     		sub sp, sp, #8
+3001E4D2  F8CD E000		str lr, [sp]
+3001E4D6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
 #0		{SRC:GateControl}
 #1		(*$WAITSWITCH$*)
@@ -39,47 +39,47 @@ END_PROGRAM
 #3			(* RF_Pulse := RF_Input AND NOT RF_Last; *)
 #4			LD		RF_Last	{LNXT:20|21|-1}
 (*) UNDEF
-300000DA  F8DF 7370		ldr r7, [pc, #+880] ; 0x200002A5
-300000DE  7838     		ldrb r0, [r7]
+3001E4DA  F8DF 7340		ldr r7, [pc, #+832] ; 0x200002A5
+3001E4DE  7838     		ldrb r0, [r7]
 
 #5			NOT	{LNXT:20|21|-1}
 (*) BOOL
-300000E0  2800     		cmp r0, #0
-300000E2  BF08 2001		eqmov r0, #1
-300000E6  BF18 2000		nemov r0, #0
+3001E4E0  2800     		cmp r0, #0
+3001E4E2  BF08 2001		eqmov r0, #1
+3001E4E6  BF18 2000		nemov r0, #0
 
 #6			AND		RF_Input	{LNXT:20|21|-1}
 (*) BOOL
-300000EA  F8DF 7394		ldr r7, [pc, #+916] ; 0x2401E4F0
-300000EE  783F     		ldrb r7, [r7]
-300000F0  4038     		and r0, r0, r7
+3001E4EA  F8DF 7364		ldr r7, [pc, #+868] ; 0x2401E4F0
+3001E4EE  783F     		ldrb r7, [r7]
+3001E4F0  4038     		and r0, r0, r7
 
 #7			ST		RF_Pulse	{LNXT:20|21|-1}
 (*) BOOL
-300000F2  F8DF 735C		ldr r7, [pc, #+860] ; 0x200002A6
-300000F6  7038     		strb r0, [r7]
+3001E4F2  F8DF 732C		ldr r7, [pc, #+812] ; 0x200002A6
+3001E4F6  7038     		strb r0, [r7]
 
 #8		
 #9			(* RF_Last := RF_Input; *)
 #10			MOVE		RF_Input,RF_Last	{LNXT:21|24|-1}
 (*) BOOL
-300000F8  F8DF 7384		ldr r7, [pc, #+900] ; 0x2401E4F0
-300000FC  7838     		ldrb r0, [r7]
-300000FE  F8DF 734C		ldr r7, [pc, #+844] ; 0x200002A5
-30000102  7038     		strb r0, [r7]
+3001E4F8  F8DF 7354		ldr r7, [pc, #+852] ; 0x2401E4F0
+3001E4FC  7838     		ldrb r0, [r7]
+3001E4FE  F8DF 731C		ldr r7, [pc, #+796] ; 0x200002A5
+3001E502  7038     		strb r0, [r7]
 
 #11		
 #12		
 #13			(* IF RF_Pulse *)
 #14			LD		RF_Pulse	{LNXT:24|-1|-1}
 (*) UNDEF
-30000104  F8DF 7348		ldr r7, [pc, #+840] ; 0x200002A6
-30000108  7838     		ldrb r0, [r7]
+3001E504  F8DF 7318		ldr r7, [pc, #+792] ; 0x200002A6
+3001E508  7838     		ldrb r0, [r7]
 
 #15			JMPCN	$label0	{LNXT:24|25|30}
 (-) BOOL
-3000010A  2800     		cmp r0, #0
-3000010C  D004     		beq #8 ; 0x30000118
+3001E50A  2800     		cmp r0, #0
+3001E50C  D004     		beq #8 ; 0x3001E518
 
 
 #16		
@@ -88,9 +88,9 @@ END_PROGRAM
 #19				(* RF_Latched := TRUE; *)
 #20				MOVE		TRUE,RF_Latched	{LNXT:25|30|-1}
 (*) BOOL
-30000110  2001     		mov r0, #1 ; 1
-30000112  F8DF 7364		ldr r7, [pc, #+868] ; 0x200002C0
-30000116  7038     		strb r0, [r7]
+3001E510  2001     		mov r0, #1 ; 1
+3001E512  F8DF 7334		ldr r7, [pc, #+820] ; 0x200002C0
+3001E516  7038     		strb r0, [r7]
 
 #21		
 #22		$label0:
@@ -99,38 +99,38 @@ END_PROGRAM
 #25			(* TickCount := TickCount + 1; *)
 #26			LD		TickCount	{LNXT:30|32|-1}
 (*) UNDEF
-30000118  F8DF 7338		ldr r7, [pc, #+824] ; 0x200002A8
-3000011C  F9B7 0000		ldrsh r0, [r7]
+3001E518  F8DF 7308		ldr r7, [pc, #+776] ; 0x200002A8
+3001E51C  F9B7 0000		ldrsh r0, [r7]
 
 #27			ADD		1	{LNXT:30|32|-1}
 (-) INT
-30000120  1C40     		add r0, r0, #1
+3001E520  1C40     		add r0, r0, #1
 
 #28			ST		TickCount	{LNXT:30|32|-1}
 (*) INT
-30000122  F8DF 7330		ldr r7, [pc, #+816] ; 0x200002A8
-30000126  8038     		strh r0, [r7]
+3001E522  F8DF 7300		ldr r7, [pc, #+768] ; 0x200002A8
+3001E526  8038     		strh r0, [r7]
 
 #29		
 #30		
 #31			(* IF TickCount >= UnitTicks *)
 #32			LD		TickCount	{LNXT:32|-1|-1}
 (*) UNDEF
-30000128  F8DF 7328		ldr r7, [pc, #+808] ; 0x200002A8
-3000012C  F9B7 0000		ldrsh r0, [r7]
+3001E528  F8DF 72F8		ldr r7, [pc, #+760] ; 0x200002A8
+3001E52C  F9B7 0000		ldrsh r0, [r7]
 
 #33			GE		UnitTicks	{LNXT:32|-1|-1}
 (*) INT
-30000130  F8DF 7324		ldr r7, [pc, #+804] ; 0x200002AA
-30000134  F9B7 7000		ldrsh r7, [r7]
-30000138  42B8     		cmp r0, r7
-3000013A  BFB8 2000		ltmov r0, #0
-3000013E  BFA8 2001		gemov r0, #1
+3001E530  F8DF 72F4		ldr r7, [pc, #+756] ; 0x200002AA
+3001E534  F9B7 7000		ldrsh r7, [r7]
+3001E538  42B8     		cmp r0, r7
+3001E53A  BFB8 2000		ltmov r0, #0
+3001E53E  BFA8 2001		gemov r0, #1
 
 #34			JMPCN	$label1	{LNXT:32|33|120}
 (-) BOOL
-30000142  2800     		cmp r0, #0
-30000144  F000 812E		beq #604 ; 0x300003A4
+3001E542  2800     		cmp r0, #0
+3001E544  F000 812E		beq #604 ; 0x3001E7A4
 
 
 #35		
@@ -139,22 +139,22 @@ END_PROGRAM
 #38				(* TickCount := 0; *)
 #39				MOVE		0,TickCount	{LNXT:33|37|-1}
 (*) BOOL
-30000148  2000     		mov r0, #0 ; 0
-3000014A  F8DF 7308		ldr r7, [pc, #+776] ; 0x200002A8
-3000014E  8038     		strh r0, [r7]
+3001E548  2000     		mov r0, #0 ; 0
+3001E54A  F8DF 72D8		ldr r7, [pc, #+728] ; 0x200002A8
+3001E54E  8038     		strh r0, [r7]
 
 #40		
 #41		
 #42				(* IF RF_Latched *)
 #43				LD		RF_Latched	{LNXT:37|-1|-1}
 (*) UNDEF
-30000150  F8DF 7324		ldr r7, [pc, #+804] ; 0x200002C0
-30000154  7838     		ldrb r0, [r7]
+3001E550  F8DF 72F4		ldr r7, [pc, #+756] ; 0x200002C0
+3001E554  7838     		ldrb r0, [r7]
 
 #44				JMPCN	$label2	{LNXT:37|38|75}
 (-) BOOL
-30000156  2800     		cmp r0, #0
-30000158  D07A     		beq #244 ; 0x30000250
+3001E556  2800     		cmp r0, #0
+3001E558  D07A     		beq #244 ; 0x3001E650
 
 
 #45		
@@ -163,9 +163,9 @@ END_PROGRAM
 #48					(* RF_Latched := FALSE; *)
 #49					MOVE		FALSE,RF_Latched	{LNXT:38|41|-1}
 (*) BOOL
-3000015C  2000     		mov r0, #0 ; 0
-3000015E  F8DF 7318		ldr r7, [pc, #+792] ; 0x200002C0
-30000162  7038     		strb r0, [r7]
+3001E55C  2000     		mov r0, #0 ; 0
+3001E55E  F8DF 72E8		ldr r7, [pc, #+744] ; 0x200002C0
+3001E562  7038     		strb r0, [r7]
 
 #50		
 #51		
@@ -174,81 +174,81 @@ END_PROGRAM
 #54					(* 0: *)
 #55					LD		GateState	{LNXT:42|-1|-1}
 (*) UNDEF
-30000164  F8DF 72F4		ldr r7, [pc, #+756] ; 0x200002AC
-30000168  F9B7 0000		ldrsh r0, [r7]
+3001E564  F8DF 72C4		ldr r7, [pc, #+708] ; 0x200002AC
+3001E568  F9B7 0000		ldrsh r0, [r7]
 
 #56					EQ		0	{LNXT:42|-1|-1}
 (*) INT
-3000016C  2800     		cmp r0, #0
-3000016E  BF18 2000		nemov r0, #0
-30000172  BF08 2001		eqmov r0, #1
+3001E56C  2800     		cmp r0, #0
+3001E56E  BF18 2000		nemov r0, #0
+3001E572  BF08 2001		eqmov r0, #1
 
 #57					JMPC		$label4	{LNXT:42|44|55}
 (-) BOOL
-30000176  2800     		cmp r0, #0
-30000178  D126     		bne #76 ; 0x300001C8
+3001E576  2800     		cmp r0, #0
+3001E578  D126     		bne #76 ; 0x3001E5C8
 
 
 #58		
 #59					(* 1: *)
 #60					LD		GateState	{LNXT:55|-1|-1}
 (*) UNDEF
-3000017C  F8DF 72DC		ldr r7, [pc, #+732] ; 0x200002AC
-30000180  F9B7 0000		ldrsh r0, [r7]
+3001E57C  F8DF 72AC		ldr r7, [pc, #+684] ; 0x200002AC
+3001E580  F9B7 0000		ldrsh r0, [r7]
 
 #61					EQ		1	{LNXT:55|-1|-1}
 (*) INT
-30000184  2801     		cmp r0, #1
-30000186  BF18 2000		nemov r0, #0
-3000018A  BF08 2001		eqmov r0, #1
+3001E584  2801     		cmp r0, #1
+3001E586  BF18 2000		nemov r0, #0
+3001E58A  BF08 2001		eqmov r0, #1
 
 #62					JMPC		$label5	{LNXT:55|56|61}
 (-) BOOL
-3000018E  2800     		cmp r0, #0
-30000190  D13E     		bne #124 ; 0x30000210
+3001E58E  2800     		cmp r0, #0
+3001E590  D13E     		bne #124 ; 0x3001E610
 
 
 #63		
 #64					(* 2: *)
 #65					LD		GateState	{LNXT:61|-1|-1}
 (*) UNDEF
-30000194  F8DF 72C4		ldr r7, [pc, #+708] ; 0x200002AC
-30000198  F9B7 0000		ldrsh r0, [r7]
+3001E594  F8DF 7294		ldr r7, [pc, #+660] ; 0x200002AC
+3001E598  F9B7 0000		ldrsh r0, [r7]
 
 #66					EQ		2	{LNXT:61|-1|-1}
 (*) INT
-3000019C  2802     		cmp r0, #2
-3000019E  BF18 2000		nemov r0, #0
-300001A2  BF08 2001		eqmov r0, #1
+3001E59C  2802     		cmp r0, #2
+3001E59E  BF18 2000		nemov r0, #0
+3001E5A2  BF08 2001		eqmov r0, #1
 
 #67					JMPC		$label6	{LNXT:61|62|66}
 (-) BOOL
-300001A6  2800     		cmp r0, #0
-300001A8  D140     		bne #128 ; 0x3000022C
+3001E5A6  2800     		cmp r0, #0
+3001E5A8  D140     		bne #128 ; 0x3001E62C
 
 
 #68		
 #69					(* 3: *)
 #70					LD		GateState	{LNXT:66|-1|-1}
 (*) UNDEF
-300001AC  F8DF 72AC		ldr r7, [pc, #+684] ; 0x200002AC
-300001B0  F9B7 0000		ldrsh r0, [r7]
+3001E5AC  F8DF 727C		ldr r7, [pc, #+636] ; 0x200002AC
+3001E5B0  F9B7 0000		ldrsh r0, [r7]
 
 #71					EQ		3	{LNXT:66|-1|-1}
 (*) INT
-300001B4  2803     		cmp r0, #3
-300001B6  BF18 2000		nemov r0, #0
-300001BA  BF08 2001		eqmov r0, #1
+3001E5B4  2803     		cmp r0, #3
+3001E5B6  BF18 2000		nemov r0, #0
+3001E5BA  BF08 2001		eqmov r0, #1
 
 #72					JMPC		$label7	{LNXT:66|67|75}
 (-) BOOL
-300001BE  2800     		cmp r0, #0
-300001C0  D13E     		bne #124 ; 0x30000240
+3001E5BE  2800     		cmp r0, #0
+3001E5C0  D13E     		bne #124 ; 0x3001E640
 
 
 #73					JMP		$label3	{LNXT:66|67|75}
 (-) BOOL
-300001C4  E044     		b #136 ; 0x30000250
+3001E5C4  E044     		b #136 ; 0x3001E650
 
 
 #74		
@@ -259,19 +259,19 @@ END_PROGRAM
 #79						(* IF LastDir = 1 *)
 #80						LD		LastDir	{LNXT:44|-1|-1}
 (*) UNDEF
-300001C8  F8DF 72A0		ldr r7, [pc, #+672] ; 0x200002B4
-300001CC  F9B7 0000		ldrsh r0, [r7]
+3001E5C8  F8DF 7270		ldr r7, [pc, #+624] ; 0x200002B4
+3001E5CC  F9B7 0000		ldrsh r0, [r7]
 
 #81						EQ		1	{LNXT:44|-1|-1}
 (*) INT
-300001D0  2801     		cmp r0, #1
-300001D2  BF18 2000		nemov r0, #0
-300001D6  BF08 2001		eqmov r0, #1
+3001E5D0  2801     		cmp r0, #1
+3001E5D2  BF18 2000		nemov r0, #0
+3001E5D6  BF08 2001		eqmov r0, #1
 
 #82						JMPCN	$label8	{LNXT:44|45|47}
 (-) BOOL
-300001DA  2800     		cmp r0, #0
-300001DC  D006     		beq #12 ; 0x300001EC
+3001E5DA  2800     		cmp r0, #0
+3001E5DC  D006     		beq #12 ; 0x3001E5EC
 
 
 #83		
@@ -280,13 +280,13 @@ END_PROGRAM
 #86							(* NextDir := 2; *)
 #87							MOVE		2,NextDir	{LNXT:45|50|-1}
 (*) BOOL
-300001E0  2002     		mov r0, #2 ; 2
-300001E2  F8DF 7298		ldr r7, [pc, #+664] ; 0x200002C2
-300001E6  8038     		strh r0, [r7]
+3001E5E0  2002     		mov r0, #2 ; 2
+3001E5E2  F8DF 7268		ldr r7, [pc, #+616] ; 0x200002C2
+3001E5E6  8038     		strh r0, [r7]
 
 #88							JMP		$label9	{LNXT:44|45|47}
 (-) INT
-300001E8  E004     		b #8 ; 0x300001F4
+3001E5E8  E004     		b #8 ; 0x3001E5F4
 
 
 #89		$label8:
@@ -296,9 +296,9 @@ END_PROGRAM
 #93							(* NextDir := 1; *)
 #94							MOVE		1,NextDir	{LNXT:47|50|-1}
 (*) INT
-300001EC  2001     		mov r0, #1 ; 1
-300001EE  F8DF 728C		ldr r7, [pc, #+652] ; 0x200002C2
-300001F2  8038     		strh r0, [r7]
+3001E5EC  2001     		mov r0, #1 ; 1
+3001E5EE  F8DF 725C		ldr r7, [pc, #+604] ; 0x200002C2
+3001E5F2  8038     		strh r0, [r7]
 
 #95		
 #96		$label9:
@@ -307,29 +307,29 @@ END_PROGRAM
 #99						(* GateState := 1; *)
 #100						MOVE		1,GateState	{LNXT:50|51|-1}
 (*) INT
-300001F4  2001     		mov r0, #1 ; 1
-300001F6  F8DF 7264		ldr r7, [pc, #+612] ; 0x200002AC
-300001FA  8038     		strh r0, [r7]
+3001E5F4  2001     		mov r0, #1 ; 1
+3001E5F6  F8DF 7234		ldr r7, [pc, #+564] ; 0x200002AC
+3001E5FA  8038     		strh r0, [r7]
 
 #101		
 #102						(* DeadUnits := 0; *)
 #103						MOVE		0,DeadUnits	{LNXT:51|52|-1}
 (*) INT
-300001FC  2000     		mov r0, #0 ; 0
-300001FE  F8DF 7260		ldr r7, [pc, #+608] ; 0x200002AE
-30000202  8038     		strh r0, [r7]
+3001E5FC  2000     		mov r0, #0 ; 0
+3001E5FE  F8DF 7230		ldr r7, [pc, #+560] ; 0x200002AE
+3001E602  8038     		strh r0, [r7]
 
 #104		
 #105						(* MoveUnits := 0; *)
 #106						MOVE		0,MoveUnits	{LNXT:52|75|-1}
 (*) INT
-30000204  2000     		mov r0, #0 ; 0
-30000206  F8DF 725C		ldr r7, [pc, #+604] ; 0x200002B0
-3000020A  8038     		strh r0, [r7]
+3001E604  2000     		mov r0, #0 ; 0
+3001E606  F8DF 722C		ldr r7, [pc, #+556] ; 0x200002B0
+3001E60A  8038     		strh r0, [r7]
 
 #107						JMP		$label3	{LNXT:1|75|-1}
 (-) INT
-3000020C  E020     		b #64 ; 0x30000250
+3001E60C  E020     		b #64 ; 0x3001E650
 
 
 #108		
@@ -337,29 +337,29 @@ END_PROGRAM
 #110						(* GateState := 0; *)
 #111						MOVE		0,GateState	{LNXT:56|57|-1}
 (*) INT
-30000210  2000     		mov r0, #0 ; 0
-30000212  F8DF 7248		ldr r7, [pc, #+584] ; 0x200002AC
-30000216  8038     		strh r0, [r7]
+3001E610  2000     		mov r0, #0 ; 0
+3001E612  F8DF 7218		ldr r7, [pc, #+536] ; 0x200002AC
+3001E616  8038     		strh r0, [r7]
 
 #112		
 #113						(* DeadUnits := 0; *)
 #114						MOVE		0,DeadUnits	{LNXT:57|58|-1}
 (*) INT
-30000218  2000     		mov r0, #0 ; 0
-3000021A  F8DF 7244		ldr r7, [pc, #+580] ; 0x200002AE
-3000021E  8038     		strh r0, [r7]
+3001E618  2000     		mov r0, #0 ; 0
+3001E61A  F8DF 7214		ldr r7, [pc, #+532] ; 0x200002AE
+3001E61E  8038     		strh r0, [r7]
 
 #115		
 #116						(* MoveUnits := 0; *)
 #117						MOVE		0,MoveUnits	{LNXT:58|75|-1}
 (*) INT
-30000220  2000     		mov r0, #0 ; 0
-30000222  F8DF 7240		ldr r7, [pc, #+576] ; 0x200002B0
-30000226  8038     		strh r0, [r7]
+3001E620  2000     		mov r0, #0 ; 0
+3001E622  F8DF 7210		ldr r7, [pc, #+528] ; 0x200002B0
+3001E626  8038     		strh r0, [r7]
 
 #118						JMP		$label3	{LNXT:56|75|-1}
 (-) INT
-30000228  E012     		b #36 ; 0x30000250
+3001E628  E012     		b #36 ; 0x3001E650
 
 
 #119		
@@ -367,21 +367,21 @@ END_PROGRAM
 #121						(* GateState := 0; *)
 #122						MOVE		0,GateState	{LNXT:62|63|-1}
 (*) INT
-3000022C  2000     		mov r0, #0 ; 0
-3000022E  F8DF 722C		ldr r7, [pc, #+556] ; 0x200002AC
-30000232  8038     		strh r0, [r7]
+3001E62C  2000     		mov r0, #0 ; 0
+3001E62E  F8DF 71FC		ldr r7, [pc, #+508] ; 0x200002AC
+3001E632  8038     		strh r0, [r7]
 
 #123		
 #124						(* MoveUnits := 0; *)
 #125						MOVE		0,MoveUnits	{LNXT:63|75|-1}
 (*) INT
-30000234  2000     		mov r0, #0 ; 0
-30000236  F8DF 722C		ldr r7, [pc, #+556] ; 0x200002B0
-3000023A  8038     		strh r0, [r7]
+3001E634  2000     		mov r0, #0 ; 0
+3001E636  F8DF 71FC		ldr r7, [pc, #+508] ; 0x200002B0
+3001E63A  8038     		strh r0, [r7]
 
 #126						JMP		$label3	{LNXT:62|75|-1}
 (-) INT
-3000023C  E008     		b #16 ; 0x30000250
+3001E63C  E008     		b #16 ; 0x3001E650
 
 
 #127		
@@ -389,17 +389,17 @@ END_PROGRAM
 #129						(* GateState := 0; *)
 #130						MOVE		0,GateState	{LNXT:67|68|-1}
 (*) INT
-30000240  2000     		mov r0, #0 ; 0
-30000242  F8DF 7218		ldr r7, [pc, #+536] ; 0x200002AC
-30000246  8038     		strh r0, [r7]
+3001E640  2000     		mov r0, #0 ; 0
+3001E642  F8DF 71E8		ldr r7, [pc, #+488] ; 0x200002AC
+3001E646  8038     		strh r0, [r7]
 
 #131		
 #132						(* MoveUnits := 0; *)
 #133						MOVE		0,MoveUnits	{LNXT:68|75|-1}
 (*) INT
-30000248  2000     		mov r0, #0 ; 0
-3000024A  F8DF 7218		ldr r7, [pc, #+536] ; 0x200002B0
-3000024E  8038     		strh r0, [r7]
+3001E648  2000     		mov r0, #0 ; 0
+3001E64A  F8DF 71E8		ldr r7, [pc, #+488] ; 0x200002B0
+3001E64E  8038     		strh r0, [r7]
 
 #134		
 #135		$label3:
@@ -413,19 +413,19 @@ END_PROGRAM
 #143				(* IF GateState = 1 *)
 #144				LD		GateState	{LNXT:75|-1|-1}
 (*) UNDEF
-30000250  F8DF 7208		ldr r7, [pc, #+520] ; 0x200002AC
-30000254  F9B7 0000		ldrsh r0, [r7]
+3001E650  F8DF 71D8		ldr r7, [pc, #+472] ; 0x200002AC
+3001E654  F9B7 0000		ldrsh r0, [r7]
 
 #145				EQ		1	{LNXT:75|-1|-1}
 (*) INT
-30000258  2801     		cmp r0, #1
-3000025A  BF18 2000		nemov r0, #0
-3000025E  BF08 2001		eqmov r0, #1
+3001E658  2801     		cmp r0, #1
+3001E65A  BF18 2000		nemov r0, #0
+3001E65E  BF08 2001		eqmov r0, #1
 
 #146				JMPCN	$label10	{LNXT:75|76|95}
 (-) BOOL
-30000262  2800     		cmp r0, #0
-30000264  D03E     		beq #124 ; 0x300002E4
+3001E662  2800     		cmp r0, #0
+3001E664  D03E     		beq #124 ; 0x3001E6E4
 
 
 #147		
@@ -434,38 +434,38 @@ END_PROGRAM
 #150					(* DeadUnits := DeadUnits + 1; *)
 #151					LD		DeadUnits	{LNXT:76|78|-1}
 (*) UNDEF
-30000268  F8DF 71F4		ldr r7, [pc, #+500] ; 0x200002AE
-3000026C  F9B7 0000		ldrsh r0, [r7]
+3001E668  F8DF 71C4		ldr r7, [pc, #+452] ; 0x200002AE
+3001E66C  F9B7 0000		ldrsh r0, [r7]
 
 #152					ADD		1	{LNXT:76|78|-1}
 (-) INT
-30000270  1C40     		add r0, r0, #1
+3001E670  1C40     		add r0, r0, #1
 
 #153					ST		DeadUnits	{LNXT:76|78|-1}
 (*) INT
-30000272  F8DF 71EC		ldr r7, [pc, #+492] ; 0x200002AE
-30000276  8038     		strh r0, [r7]
+3001E672  F8DF 71BC		ldr r7, [pc, #+444] ; 0x200002AE
+3001E676  8038     		strh r0, [r7]
 
 #154		
 #155		
 #156					(* IF DeadUnits >= DeadTimeUnits *)
 #157					LD		DeadUnits	{LNXT:78|-1|-1}
 (*) UNDEF
-30000278  F8DF 71E4		ldr r7, [pc, #+484] ; 0x200002AE
-3000027C  F9B7 0000		ldrsh r0, [r7]
+3001E678  F8DF 71B4		ldr r7, [pc, #+436] ; 0x200002AE
+3001E67C  F9B7 0000		ldrsh r0, [r7]
 
 #158					GE		DeadTimeUnits	{LNXT:78|-1|-1}
 (*) INT
-30000280  F8DF 71E4		ldr r7, [pc, #+484] ; 0x200002B2
-30000284  F9B7 7000		ldrsh r7, [r7]
-30000288  42B8     		cmp r0, r7
-3000028A  BFB8 2000		ltmov r0, #0
-3000028E  BFA8 2001		gemov r0, #1
+3001E680  F8DF 71B4		ldr r7, [pc, #+436] ; 0x200002B2
+3001E684  F9B7 7000		ldrsh r7, [r7]
+3001E688  42B8     		cmp r0, r7
+3001E68A  BFB8 2000		ltmov r0, #0
+3001E68E  BFA8 2001		gemov r0, #1
 
 #159					JMPCN	$label11	{LNXT:78|79|95}
 (-) BOOL
-30000292  2800     		cmp r0, #0
-30000294  D026     		beq #76 ; 0x300002E4
+3001E692  2800     		cmp r0, #0
+3001E694  D026     		beq #76 ; 0x3001E6E4
 
 
 #160		
@@ -474,36 +474,36 @@ END_PROGRAM
 #163						(* DeadUnits := 0; *)
 #164						MOVE		0,DeadUnits	{LNXT:79|80|-1}
 (*) BOOL
-30000298  2000     		mov r0, #0 ; 0
-3000029A  F8DF 71C4		ldr r7, [pc, #+452] ; 0x200002AE
-3000029E  8038     		strh r0, [r7]
+3001E698  2000     		mov r0, #0 ; 0
+3001E69A  F8DF 7194		ldr r7, [pc, #+404] ; 0x200002AE
+3001E69E  8038     		strh r0, [r7]
 
 #165		
 #166						(* MoveUnits := 0; *)
 #167						MOVE		0,MoveUnits	{LNXT:80|82|-1}
 (*) INT
-300002A0  2000     		mov r0, #0 ; 0
-300002A2  F8DF 71C0		ldr r7, [pc, #+448] ; 0x200002B0
-300002A6  8038     		strh r0, [r7]
+3001E6A0  2000     		mov r0, #0 ; 0
+3001E6A2  F8DF 7190		ldr r7, [pc, #+400] ; 0x200002B0
+3001E6A6  8038     		strh r0, [r7]
 
 #168		
 #169		
 #170						(* IF NextDir = 1 *)
 #171						LD		NextDir	{LNXT:82|-1|-1}
 (*) UNDEF
-300002A8  F8DF 71D0		ldr r7, [pc, #+464] ; 0x200002C2
-300002AC  F9B7 0000		ldrsh r0, [r7]
+3001E6A8  F8DF 71A0		ldr r7, [pc, #+416] ; 0x200002C2
+3001E6AC  F9B7 0000		ldrsh r0, [r7]
 
 #172						EQ		1	{LNXT:82|-1|-1}
 (*) INT
-300002B0  2801     		cmp r0, #1
-300002B2  BF18 2000		nemov r0, #0
-300002B6  BF08 2001		eqmov r0, #1
+3001E6B0  2801     		cmp r0, #1
+3001E6B2  BF18 2000		nemov r0, #0
+3001E6B6  BF08 2001		eqmov r0, #1
 
 #173						JMPCN	$label12	{LNXT:82|83|86}
 (-) BOOL
-300002BA  2800     		cmp r0, #0
-300002BC  D00A     		beq #20 ; 0x300002D4
+3001E6BA  2800     		cmp r0, #0
+3001E6BC  D00A     		beq #20 ; 0x3001E6D4
 
 
 #174		
@@ -512,21 +512,21 @@ END_PROGRAM
 #177							(* GateState := 2; *)
 #178							MOVE		2,GateState	{LNXT:83|84|-1}
 (*) BOOL
-300002C0  2002     		mov r0, #2 ; 2
-300002C2  F8DF 7198		ldr r7, [pc, #+408] ; 0x200002AC
-300002C6  8038     		strh r0, [r7]
+3001E6C0  2002     		mov r0, #2 ; 2
+3001E6C2  F8DF 7168		ldr r7, [pc, #+360] ; 0x200002AC
+3001E6C6  8038     		strh r0, [r7]
 
 #179		
 #180							(* LastDir := 1; *)
 #181							MOVE		1,LastDir	{LNXT:84|95|-1}
 (*) INT
-300002C8  2001     		mov r0, #1 ; 1
-300002CA  F8DF 71A0		ldr r7, [pc, #+416] ; 0x200002B4
-300002CE  8038     		strh r0, [r7]
+3001E6C8  2001     		mov r0, #1 ; 1
+3001E6CA  F8DF 7170		ldr r7, [pc, #+368] ; 0x200002B4
+3001E6CE  8038     		strh r0, [r7]
 
 #182							JMP		$label13	{LNXT:82|83|86}
 (-) INT
-300002D0  E008     		b #16 ; 0x300002E4
+3001E6D0  E008     		b #16 ; 0x3001E6E4
 
 
 #183		$label12:
@@ -536,17 +536,17 @@ END_PROGRAM
 #187							(* GateState := 3; *)
 #188							MOVE		3,GateState	{LNXT:86|87|-1}
 (*) INT
-300002D4  2003     		mov r0, #3 ; 3
-300002D6  F8DF 7184		ldr r7, [pc, #+388] ; 0x200002AC
-300002DA  8038     		strh r0, [r7]
+3001E6D4  2003     		mov r0, #3 ; 3
+3001E6D6  F8DF 7154		ldr r7, [pc, #+340] ; 0x200002AC
+3001E6DA  8038     		strh r0, [r7]
 
 #189		
 #190							(* LastDir := 2; *)
 #191							MOVE		2,LastDir	{LNXT:87|95|-1}
 (*) INT
-300002DC  2002     		mov r0, #2 ; 2
-300002DE  F8DF 718C		ldr r7, [pc, #+396] ; 0x200002B4
-300002E2  8038     		strh r0, [r7]
+3001E6DC  2002     		mov r0, #2 ; 2
+3001E6DE  F8DF 715C		ldr r7, [pc, #+348] ; 0x200002B4
+3001E6E2  8038     		strh r0, [r7]
 
 #192		
 #193		$label13:
@@ -562,19 +562,19 @@ END_PROGRAM
 #203				(* IF GateState = 2 *)
 #204				LD		GateState	{LNXT:95|-1|-1}
 (*) UNDEF
-300002E4  F8DF 7174		ldr r7, [pc, #+372] ; 0x200002AC
-300002E8  F9B7 0000		ldrsh r0, [r7]
+3001E6E4  F8DF 7144		ldr r7, [pc, #+324] ; 0x200002AC
+3001E6E8  F9B7 0000		ldrsh r0, [r7]
 
 #205				EQ		2	{LNXT:95|-1|-1}
 (*) INT
-300002EC  2802     		cmp r0, #2
-300002EE  BF18 2000		nemov r0, #0
-300002F2  BF08 2001		eqmov r0, #1
+3001E6EC  2802     		cmp r0, #2
+3001E6EE  BF18 2000		nemov r0, #0
+3001E6F2  BF08 2001		eqmov r0, #1
 
 #206				JMPCN	$label14	{LNXT:95|96|103}
 (-) BOOL
-300002F6  2800     		cmp r0, #0
-300002F8  D022     		beq #68 ; 0x30000340
+3001E6F6  2800     		cmp r0, #0
+3001E6F8  D022     		beq #68 ; 0x3001E740
 
 
 #207		
@@ -583,38 +583,38 @@ END_PROGRAM
 #210					(* MoveUnits := MoveUnits + 1; *)
 #211					LD		MoveUnits	{LNXT:96|98|-1}
 (*) UNDEF
-300002FC  F8DF 7164		ldr r7, [pc, #+356] ; 0x200002B0
-30000300  F9B7 0000		ldrsh r0, [r7]
+3001E6FC  F8DF 7134		ldr r7, [pc, #+308] ; 0x200002B0
+3001E700  F9B7 0000		ldrsh r0, [r7]
 
 #212					ADD		1	{LNXT:96|98|-1}
 (-) INT
-30000304  1C40     		add r0, r0, #1
+3001E704  1C40     		add r0, r0, #1
 
 #213					ST		MoveUnits	{LNXT:96|98|-1}
 (*) INT
-30000306  F8DF 715C		ldr r7, [pc, #+348] ; 0x200002B0
-3000030A  8038     		strh r0, [r7]
+3001E706  F8DF 712C		ldr r7, [pc, #+300] ; 0x200002B0
+3001E70A  8038     		strh r0, [r7]
 
 #214		
 #215		
 #216					(* IF MoveUnits >= OpenTimeUnits *)
 #217					LD		MoveUnits	{LNXT:98|-1|-1}
 (*) UNDEF
-3000030C  F8DF 7154		ldr r7, [pc, #+340] ; 0x200002B0
-30000310  F9B7 0000		ldrsh r0, [r7]
+3001E70C  F8DF 7124		ldr r7, [pc, #+292] ; 0x200002B0
+3001E710  F9B7 0000		ldrsh r0, [r7]
 
 #218					GE		OpenTimeUnits	{LNXT:98|-1|-1}
 (*) INT
-30000314  F8DF 7158		ldr r7, [pc, #+344] ; 0x200002B6
-30000318  F9B7 7000		ldrsh r7, [r7]
-3000031C  42B8     		cmp r0, r7
-3000031E  BFB8 2000		ltmov r0, #0
-30000322  BFA8 2001		gemov r0, #1
+3001E714  F8DF 7128		ldr r7, [pc, #+296] ; 0x200002B6
+3001E718  F9B7 7000		ldrsh r7, [r7]
+3001E71C  42B8     		cmp r0, r7
+3001E71E  BFB8 2000		ltmov r0, #0
+3001E722  BFA8 2001		gemov r0, #1
 
 #219					JMPCN	$label17	{LNXT:98|99|120}
 (-) BOOL
-30000326  2800     		cmp r0, #0
-30000328  D008     		beq #16 ; 0x3000033C
+3001E726  2800     		cmp r0, #0
+3001E728  D008     		beq #16 ; 0x3001E73C
 
 
 #220		
@@ -623,24 +623,24 @@ END_PROGRAM
 #223						(* GateState := 0; *)
 #224						MOVE		0,GateState	{LNXT:99|100|-1}
 (*) BOOL
-3000032C  2000     		mov r0, #0 ; 0
-3000032E  F8DF 712C		ldr r7, [pc, #+300] ; 0x200002AC
-30000332  8038     		strh r0, [r7]
+3001E72C  2000     		mov r0, #0 ; 0
+3001E72E  F8DF 70FC		ldr r7, [pc, #+252] ; 0x200002AC
+3001E732  8038     		strh r0, [r7]
 
 #225		
 #226						(* MoveUnits := 0; *)
 #227						MOVE		0,MoveUnits	{LNXT:100|120|-1}
 (*) INT
-30000334  2000     		mov r0, #0 ; 0
-30000336  F8DF 712C		ldr r7, [pc, #+300] ; 0x200002B0
-3000033A  8038     		strh r0, [r7]
+3001E734  2000     		mov r0, #0 ; 0
+3001E736  F8DF 70FC		ldr r7, [pc, #+252] ; 0x200002B0
+3001E73A  8038     		strh r0, [r7]
 
 #228		
 #229		$label17:
 #230					(* END_IF *)
 #231					JMP		$label16	{LNXT:95|96|103}
 (-) INT
-3000033C  E032     		b #100 ; 0x300003A4
+3001E73C  E032     		b #100 ; 0x3001E7A4
 
 
 #232		$label14:
@@ -648,19 +648,19 @@ END_PROGRAM
 #234				(* ELSIF GateState = 3 *)
 #235				LD		GateState	{LNXT:103|-1|-1}
 (*) UNDEF
-30000340  F8DF 7118		ldr r7, [pc, #+280] ; 0x200002AC
-30000344  F9B7 0000		ldrsh r0, [r7]
+3001E740  F8DF 70E8		ldr r7, [pc, #+232] ; 0x200002AC
+3001E744  F9B7 0000		ldrsh r0, [r7]
 
 #236				EQ		3	{LNXT:103|-1|-1}
 (*) INT
-30000348  2803     		cmp r0, #3
-3000034A  BF18 2000		nemov r0, #0
-3000034E  BF08 2001		eqmov r0, #1
+3001E748  2803     		cmp r0, #3
+3001E74A  BF18 2000		nemov r0, #0
+3001E74E  BF08 2001		eqmov r0, #1
 
 #237				JMPCN	$label15	{LNXT:103|104|112}
 (-) BOOL
-30000352  2800     		cmp r0, #0
-30000354  D022     		beq #68 ; 0x3000039C
+3001E752  2800     		cmp r0, #0
+3001E754  D022     		beq #68 ; 0x3001E79C
 
 
 #238		
@@ -669,38 +669,38 @@ END_PROGRAM
 #241					(* MoveUnits := MoveUnits + 1; *)
 #242					LD		MoveUnits	{LNXT:104|106|-1}
 (*) UNDEF
-30000358  F8DF 7108		ldr r7, [pc, #+264] ; 0x200002B0
-3000035C  F9B7 0000		ldrsh r0, [r7]
+3001E758  F8DF 70D8		ldr r7, [pc, #+216] ; 0x200002B0
+3001E75C  F9B7 0000		ldrsh r0, [r7]
 
 #243					ADD		1	{LNXT:104|106|-1}
 (-) INT
-30000360  1C40     		add r0, r0, #1
+3001E760  1C40     		add r0, r0, #1
 
 #244					ST		MoveUnits	{LNXT:104|106|-1}
 (*) INT
-30000362  F8DF 7100		ldr r7, [pc, #+256] ; 0x200002B0
-30000366  8038     		strh r0, [r7]
+3001E762  F8DF 70D0		ldr r7, [pc, #+208] ; 0x200002B0
+3001E766  8038     		strh r0, [r7]
 
 #245		
 #246		
 #247					(* IF MoveUnits >= CloseTimeUnits *)
 #248					LD		MoveUnits	{LNXT:106|-1|-1}
 (*) UNDEF
-30000368  F8DF 70F8		ldr r7, [pc, #+248] ; 0x200002B0
-3000036C  F9B7 0000		ldrsh r0, [r7]
+3001E768  F8DF 70C8		ldr r7, [pc, #+200] ; 0x200002B0
+3001E76C  F9B7 0000		ldrsh r0, [r7]
 
 #249					GE		CloseTimeUnits	{LNXT:106|-1|-1}
 (*) INT
-30000370  F8DF 7100		ldr r7, [pc, #+256] ; 0x200002B8
-30000374  F9B7 7000		ldrsh r7, [r7]
-30000378  42B8     		cmp r0, r7
-3000037A  BFB8 2000		ltmov r0, #0
-3000037E  BFA8 2001		gemov r0, #1
+3001E770  F8DF 70D0		ldr r7, [pc, #+208] ; 0x200002B8
+3001E774  F9B7 7000		ldrsh r7, [r7]
+3001E778  42B8     		cmp r0, r7
+3001E77A  BFB8 2000		ltmov r0, #0
+3001E77E  BFA8 2001		gemov r0, #1
 
 #250					JMPCN	$label18	{LNXT:106|107|120}
 (-) BOOL
-30000382  2800     		cmp r0, #0
-30000384  D008     		beq #16 ; 0x30000398
+3001E782  2800     		cmp r0, #0
+3001E784  D008     		beq #16 ; 0x3001E798
 
 
 #251		
@@ -709,24 +709,24 @@ END_PROGRAM
 #254						(* GateState := 0; *)
 #255						MOVE		0,GateState	{LNXT:107|108|-1}
 (*) BOOL
-30000388  2000     		mov r0, #0 ; 0
-3000038A  F8DF 70D0		ldr r7, [pc, #+208] ; 0x200002AC
-3000038E  8038     		strh r0, [r7]
+3001E788  2000     		mov r0, #0 ; 0
+3001E78A  F8DF 70A0		ldr r7, [pc, #+160] ; 0x200002AC
+3001E78E  8038     		strh r0, [r7]
 
 #256		
 #257						(* MoveUnits := 0; *)
 #258						MOVE		0,MoveUnits	{LNXT:108|120|-1}
 (*) INT
-30000390  2000     		mov r0, #0 ; 0
-30000392  F8DF 70D0		ldr r7, [pc, #+208] ; 0x200002B0
-30000396  8038     		strh r0, [r7]
+3001E790  2000     		mov r0, #0 ; 0
+3001E792  F8DF 70A0		ldr r7, [pc, #+160] ; 0x200002B0
+3001E796  8038     		strh r0, [r7]
 
 #259		
 #260		$label18:
 #261					(* END_IF *)
 #262					JMP		$label16	{LNXT:103|104|112}
 (-) INT
-30000398  E004     		b #8 ; 0x300003A4
+3001E798  E004     		b #8 ; 0x3001E7A4
 
 
 #263		$label15:
@@ -736,9 +736,9 @@ END_PROGRAM
 #267					(* MoveUnits := 0; *)
 #268					MOVE		0,MoveUnits	{LNXT:112|120|-1}
 (*) INT
-3000039C  2000     		mov r0, #0 ; 0
-3000039E  F8DF 70C4		ldr r7, [pc, #+196] ; 0x200002B0
-300003A2  8038     		strh r0, [r7]
+3001E79C  2000     		mov r0, #0 ; 0
+3001E79E  F8DF 7094		ldr r7, [pc, #+148] ; 0x200002B0
+3001E7A2  8038     		strh r0, [r7]
 
 #269		
 #270		$label16:
@@ -753,182 +753,132 @@ END_PROGRAM
 #279			(* 2: *)
 #280			LD		GateState	{LNXT:121|-1|-1}
 (*) UNDEF
-300003A4  F8DF 70B4		ldr r7, [pc, #+180] ; 0x200002AC
-300003A8  F9B7 0000		ldrsh r0, [r7]
+3001E7A4  F8DF 7084		ldr r7, [pc, #+132] ; 0x200002AC
+3001E7A8  F9B7 0000		ldrsh r0, [r7]
 
 #281			EQ		2	{LNXT:121|-1|-1}
 (*) INT
-300003AC  2802     		cmp r0, #2
-300003AE  BF18 2000		nemov r0, #0
-300003B2  BF08 2001		eqmov r0, #1
+3001E7AC  2802     		cmp r0, #2
+3001E7AE  BF18 2000		nemov r0, #0
+3001E7B2  BF08 2001		eqmov r0, #1
 
-#282			JMPC		$label20	{LNXT:121|122|127}
+#282			JMPC		$label20	{LNXT:121|122|125}
 (-) BOOL
-300003B6  2800     		cmp r0, #0
-300003B8  D10E     		bne #28 ; 0x300003D8
+3001E7B6  2800     		cmp r0, #0
+3001E7B8  D10E     		bne #28 ; 0x3001E7D8
 
 
 #283		
 #284			(* 3: *)
-#285			LD		GateState	{LNXT:127|-1|-1}
+#285			LD		GateState	{LNXT:125|-1|-1}
 (*) UNDEF
-300003BC  F8DF 709C		ldr r7, [pc, #+156] ; 0x200002AC
-300003C0  F9B7 0000		ldrsh r0, [r7]
+3001E7BC  F8DF 706C		ldr r7, [pc, #+108] ; 0x200002AC
+3001E7C0  F9B7 0000		ldrsh r0, [r7]
 
-#286			EQ		3	{LNXT:127|-1|-1}
+#286			EQ		3	{LNXT:125|-1|-1}
 (*) INT
-300003C4  2803     		cmp r0, #3
-300003C6  BF18 2000		nemov r0, #0
-300003CA  BF08 2001		eqmov r0, #1
+3001E7C4  2803     		cmp r0, #3
+3001E7C6  BF18 2000		nemov r0, #0
+3001E7CA  BF08 2001		eqmov r0, #1
 
-#287			JMPC		$label21	{LNXT:127|128|134}
+#287			JMPC		$label21	{LNXT:125|126|130}
 (-) BOOL
-300003CE  2800     		cmp r0, #0
-300003D0  D114     		bne #40 ; 0x300003FC
+3001E7CE  2800     		cmp r0, #0
+3001E7D0  D10C     		bne #24 ; 0x3001E7EC
 
 
 #288		
 #289			(* ELSE *)
-#290			JMP		$label22	{LNXT:127|128|134}
+#290			JMP		$label22	{LNXT:125|126|130}
 (-) BOOL
-300003D4  E024     		b #72 ; 0x30000420
+3001E7D4  E014     		b #40 ; 0x3001E800
 
 
 #291		
 #292			(* Istruzioni di ciascun CASE: *)
 #293		
 #294		$label20:
-#295				(* OpenRelay    := TRUE; *)
+#295				(* OpenRelay := TRUE; *)
 #296				MOVE		TRUE,OpenRelay	{LNXT:122|123|-1}
 (*) BOOL
-300003D8  2001     		mov r0, #1 ; 1
-300003DA  F8DF 70A8		ldr r7, [pc, #+168] ; 0x2401E70C
-300003DE  7038     		strb r0, [r7]
+3001E7D8  2001     		mov r0, #1 ; 1
+3001E7DA  F8DF 7078		ldr r7, [pc, #+120] ; 0x2401E70C
+3001E7DE  7038     		strb r0, [r7]
 
 #297		
-#298				(* CloseRelay   := FALSE; *)
-#299				MOVE		FALSE,CloseRelay	{LNXT:123|124|-1}
+#298				(* CloseRelay := FALSE; *)
+#299				MOVE		FALSE,CloseRelay	{LNXT:123|20|-1}
 (*) BOOL
-300003E0  2000     		mov r0, #0 ; 0
-300003E2  F8DF 70A4		ldr r7, [pc, #+164] ; 0x2401E70D
-300003E6  7038     		strb r0, [r7]
+3001E7E0  2000     		mov r0, #0 ; 0
+3001E7E2  F8DF 7074		ldr r7, [pc, #+116] ; 0x2401E70D
+3001E7E6  7038     		strb r0, [r7]
 
-#300		
-#301				(* OpenRelay_2  := TRUE; *)
-#302				MOVE		TRUE,OpenRelay_2	{LNXT:124|125|-1}
-(*) BOOL
-300003E8  2001     		mov r0, #1 ; 1
-300003EA  F8DF 70A0		ldr r7, [pc, #+160] ; 0x2401E70E
-300003EE  7038     		strb r0, [r7]
-
-#303		
-#304				(* CloseRelay_2 := FALSE; *)
-#305				MOVE		FALSE,CloseRelay_2	{LNXT:125|20|-1}
-(*) BOOL
-300003F0  2000     		mov r0, #0 ; 0
-300003F2  F8DF 709C		ldr r7, [pc, #+156] ; 0x2401E70F
-300003F6  7038     		strb r0, [r7]
-
-#306				JMP		$label19	{LNXT:122|20|-1}
+#300				JMP		$label19	{LNXT:122|20|-1}
 (-) BOOL
-300003F8  E022     		b #68 ; 0x30000440
+3001E7E8  E012     		b #36 ; 0x3001E810
 
 
-#307		
-#308		$label21:
-#309				(* OpenRelay    := FALSE; *)
-#310				MOVE		FALSE,OpenRelay	{LNXT:128|129|-1}
+#301		
+#302		$label21:
+#303				(* OpenRelay := FALSE; *)
+#304				MOVE		FALSE,OpenRelay	{LNXT:126|127|-1}
 (*) BOOL
-300003FC  2000     		mov r0, #0 ; 0
-300003FE  F8DF 7084		ldr r7, [pc, #+132] ; 0x2401E70C
-30000402  7038     		strb r0, [r7]
+3001E7EC  2000     		mov r0, #0 ; 0
+3001E7EE  F8DF 7064		ldr r7, [pc, #+100] ; 0x2401E70C
+3001E7F2  7038     		strb r0, [r7]
 
-#311		
-#312				(* CloseRelay   := TRUE; *)
-#313				MOVE		TRUE,CloseRelay	{LNXT:129|130|-1}
+#305		
+#306				(* CloseRelay := TRUE; *)
+#307				MOVE		TRUE,CloseRelay	{LNXT:127|20|-1}
 (*) BOOL
-30000404  2001     		mov r0, #1 ; 1
-30000406  F8DF 7080		ldr r7, [pc, #+128] ; 0x2401E70D
-3000040A  7038     		strb r0, [r7]
+3001E7F4  2001     		mov r0, #1 ; 1
+3001E7F6  F8DF 7060		ldr r7, [pc, #+96] ; 0x2401E70D
+3001E7FA  7038     		strb r0, [r7]
 
-#314		
-#315				(* OpenRelay_2  := FALSE; *)
-#316				MOVE		FALSE,OpenRelay_2	{LNXT:130|131|-1}
-(*) BOOL
-3000040C  2000     		mov r0, #0 ; 0
-3000040E  F8DF 707C		ldr r7, [pc, #+124] ; 0x2401E70E
-30000412  7038     		strb r0, [r7]
-
-#317		
-#318				(* CloseRelay_2 := TRUE; *)
-#319				MOVE		TRUE,CloseRelay_2	{LNXT:131|20|-1}
-(*) BOOL
-30000414  2001     		mov r0, #1 ; 1
-30000416  F8DF 7078		ldr r7, [pc, #+120] ; 0x2401E70F
-3000041A  7038     		strb r0, [r7]
-
-#320				JMP		$label19	{LNXT:128|20|-1}
+#308				JMP		$label19	{LNXT:126|20|-1}
 (-) BOOL
-3000041C  E010     		b #32 ; 0x30000440
+3001E7FC  E008     		b #16 ; 0x3001E810
 
 
-#321		
-#322		$label22:
-#323				(* OpenRelay    := FALSE; *)
-#324				MOVE		FALSE,OpenRelay	{LNXT:134|135|-1}
+#309		
+#310		$label22:
+#311				(* OpenRelay := FALSE; *)
+#312				MOVE		FALSE,OpenRelay	{LNXT:130|131|-1}
 (*) BOOL
-30000420  2000     		mov r0, #0 ; 0
-30000422  F8DF 7060		ldr r7, [pc, #+96] ; 0x2401E70C
-30000426  7038     		strb r0, [r7]
+3001E800  2000     		mov r0, #0 ; 0
+3001E802  F8DF 7050		ldr r7, [pc, #+80] ; 0x2401E70C
+3001E806  7038     		strb r0, [r7]
 
-#325		
-#326				(* CloseRelay   := FALSE; *)
-#327				MOVE		FALSE,CloseRelay	{LNXT:135|136|-1}
+#313		
+#314				(* CloseRelay := FALSE; *)
+#315				MOVE		FALSE,CloseRelay	{LNXT:131|20|-1}
 (*) BOOL
-30000428  2000     		mov r0, #0 ; 0
-3000042A  F8DF 705C		ldr r7, [pc, #+92] ; 0x2401E70D
-3000042E  7038     		strb r0, [r7]
+3001E808  2000     		mov r0, #0 ; 0
+3001E80A  F8DF 704C		ldr r7, [pc, #+76] ; 0x2401E70D
+3001E80E  7038     		strb r0, [r7]
 
-#328		
-#329				(* OpenRelay_2  := FALSE; *)
-#330				MOVE		FALSE,OpenRelay_2	{LNXT:136|137|-1}
-(*) BOOL
-30000430  2000     		mov r0, #0 ; 0
-30000432  F8DF 7058		ldr r7, [pc, #+88] ; 0x2401E70E
-30000436  7038     		strb r0, [r7]
+3001E810  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E814  F8DD E000		ldr lr, [sp]
+3001E818  B002     		add sp, sp, #8
 
-#331		
-#332				(* CloseRelay_2 := FALSE; *)
-#333				MOVE		FALSE,CloseRelay_2	{LNXT:137|20|-1}
-(*) BOOL
-30000438  2000     		mov r0, #0 ; 0
-3000043A  F8DF 7054		ldr r7, [pc, #+84] ; 0x2401E70F
-3000043E  7038     		strb r0, [r7]
+3001E81A  4770     		bx lr
 
-30000440  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-30000444  F8DD E000		ldr lr, [sp]
-30000448  B002     		add sp, sp, #8
-
-3000044A  4770     		bx lr
-
-3000044C  200002A5		; 0x200002A5
-30000450  200002A6		; 0x200002A6
-30000454  200002A8		; 0x200002A8
-30000458  200002AA		; 0x200002AA
-3000045C  200002AC		; 0x200002AC
-30000460  200002AE		; 0x200002AE
-30000464  200002B0		; 0x200002B0
-30000468  200002B2		; 0x200002B2
-3000046C  200002B4		; 0x200002B4
-30000470  200002B6		; 0x200002B6
-30000474  200002B8		; 0x200002B8
-30000478  200002C0		; 0x200002C0
-3000047C  200002C2		; 0x200002C2
-30000480  FFFFFFFF		; 0x2401E4F0
-30000484  FFFFFFFF		; 0x2401E70C
-30000488  FFFFFFFF		; 0x2401E70D
-3000048C  FFFFFFFF		; 0x2401E70E
-30000490  FFFFFFFF		; 0x2401E70F
+3001E81C  200002A5		; 0x200002A5
+3001E820  200002A6		; 0x200002A6
+3001E824  200002A8		; 0x200002A8
+3001E828  200002AA		; 0x200002AA
+3001E82C  200002AC		; 0x200002AC
+3001E830  200002AE		; 0x200002AE
+3001E834  200002B0		; 0x200002B0
+3001E838  200002B2		; 0x200002B2
+3001E83C  200002B4		; 0x200002B4
+3001E840  200002B6		; 0x200002B6
+3001E844  200002B8		; 0x200002B8
+3001E848  200002C0		; 0x200002C0
+3001E84C  200002C2		; 0x200002C2
+3001E850  FFFFFFFF		; 0x2401E4F0
+3001E854  FFFFFFFF		; 0x2401E70C
+3001E858  FFFFFFFF		; 0x2401E70D
 
 END_PROGRAM
 
@@ -939,11 +889,11 @@ END_PROGRAM
 
 
 *** INPUT:
-30000494  4770     		bx lr
+3001E85C  4770     		bx lr
 
 
 *** OUTPUT:
-30000496  4770     		bx lr
+3001E85E  4770     		bx lr
 
 
 
@@ -951,15 +901,15 @@ END_PROGRAM
 	Task Fast init code
 **************************************************
 
-30000498  B082     		sub sp, sp, #8
-3000049A  F8CD E000		str lr, [sp]
-3000049E  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E860  B082     		sub sp, sp, #8
+3001E862  F8CD E000		str lr, [sp]
+3001E866  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
-300004A2  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-300004A6  F8DD E000		ldr lr, [sp]
-300004AA  B002     		add sp, sp, #8
+3001E86A  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E86E  F8DD E000		ldr lr, [sp]
+3001E872  B002     		add sp, sp, #8
 
-300004AC  4770     		bx lr
+3001E874  4770     		bx lr
 
 **************************************************
 	List program: InitParDB
@@ -974,9 +924,9 @@ dummyCrc32 : UDINT;
 
 END_PROGRAM
 
-300004C0  B082     		sub sp, sp, #8
-300004C2  F8CD E000		str lr, [sp]
-300004C6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E890  B082     		sub sp, sp, #8
+3001E892  F8CD E000		str lr, [sp]
+3001E896  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
 #0		{SRC:InitParDB}
 #1		(*$WAITSWITCH$*)
@@ -984,9 +934,9 @@ END_PROGRAM
 #3			(* dummyCrc32 := 0; *)
 #4			MOVE		0,dummyCrc32	{LNXT:3|5|-1}
 (*) UDINT
-300004CA  2000     		mov r0, #0 ; 0
-300004CC  F8DF 7058		ldr r7, [pc, #+88] ; 0x200002BC
-300004D0  6038     		str r0, [r7]
+3001E89A  2000     		mov r0, #0 ; 0
+3001E89C  F8DF 7058		ldr r7, [pc, #+88] ; 0x200002BC
+3001E8A0  6038     		str r0, [r7]
 
 #5		
 #6			(* warningsKiller := sysDBase_SetExtTable( TO_DWORD( 0 ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ); *)
@@ -994,46 +944,46 @@ END_PROGRAM
 (-) UDINT
 #8			TO_DWORD	{LNXT:5|3|-1}
 (-) USINT
-300004D2  2000     		mov r0, #0 ; 0
+3001E8A2  2000     		mov r0, #0 ; 0
 
 #9			sysDBase_SetExtTable		0, 0, 0, 0, 0, 0, 0, 0, 0, 0	{LNXT:5|3|-1}
 (*) DWORD
-300004D4  B088     		sub sp, sp, #32
-300004D6  2700     		mov r7, #0 ; 0
-300004D8  4639     		mov r1, r7
-300004DA  2700     		mov r7, #0 ; 0
-300004DC  463A     		mov r2, r7
-300004DE  2700     		mov r7, #0 ; 0
-300004E0  463B     		mov r3, r7
-300004E2  2700     		mov r7, #0 ; 0
-300004E4  F8CD 7000		str r7, [sp]
-300004E8  2700     		mov r7, #0 ; 0
-300004EA  F8CD 7004		str r7, [sp, #+4]
-300004EE  2700     		mov r7, #0 ; 0
-300004F0  F8CD 7008		str r7, [sp, #+8]
-300004F4  2700     		mov r7, #0 ; 0
-300004F6  F8CD 700C		str r7, [sp, #+12]
-300004FA  2700     		mov r7, #0 ; 0
-300004FC  F8CD 7010		str r7, [sp, #+16]
-30000500  2700     		mov r7, #0 ; 0
-30000502  F8CD 7014		str r7, [sp, #+20]
-30000506  2700     		mov r7, #0 ; 0
-30000508  F8CD 7018		str r7, [sp, #+24]
-3000050C  F8DF 4010		ldr r4, [pc, #+16] ; 0x80768F5
-30000510  F044 0401		orr r4, r4, #1
-30000514  47A0     		blx r4
-30000516  B008     		add sp, sp, #32
+3001E8A4  B088     		sub sp, sp, #32
+3001E8A6  2700     		mov r7, #0 ; 0
+3001E8A8  4639     		mov r1, r7
+3001E8AA  2700     		mov r7, #0 ; 0
+3001E8AC  463A     		mov r2, r7
+3001E8AE  2700     		mov r7, #0 ; 0
+3001E8B0  463B     		mov r3, r7
+3001E8B2  2700     		mov r7, #0 ; 0
+3001E8B4  F8CD 7000		str r7, [sp]
+3001E8B8  2700     		mov r7, #0 ; 0
+3001E8BA  F8CD 7004		str r7, [sp, #+4]
+3001E8BE  2700     		mov r7, #0 ; 0
+3001E8C0  F8CD 7008		str r7, [sp, #+8]
+3001E8C4  2700     		mov r7, #0 ; 0
+3001E8C6  F8CD 700C		str r7, [sp, #+12]
+3001E8CA  2700     		mov r7, #0 ; 0
+3001E8CC  F8CD 7010		str r7, [sp, #+16]
+3001E8D0  2700     		mov r7, #0 ; 0
+3001E8D2  F8CD 7014		str r7, [sp, #+20]
+3001E8D6  2700     		mov r7, #0 ; 0
+3001E8D8  F8CD 7018		str r7, [sp, #+24]
+3001E8DC  F8DF 4010		ldr r4, [pc, #+16] ; 0x80768F5
+3001E8E0  F044 0401		orr r4, r4, #1
+3001E8E4  47A0     		blx r4
+3001E8E6  B008     		add sp, sp, #32
 
 #10			ST		warningsKiller	{LNXT:5|3|-1}
 (*) USINT
-30000518  F8DF 7008		ldr r7, [pc, #+8] ; 0x200002A7
-3000051C  7038     		strb r0, [r7]
+3001E8E8  F8DF 7008		ldr r7, [pc, #+8] ; 0x200002A7
+3001E8EC  7038     		strb r0, [r7]
 
-3000051E  E005     		b #10
+3001E8EE  E005     		b #10
 
-30000520  FFFFFFFF		; 0x080768F5
-30000524  200002A7		; 0x200002A7
-30000528  200002BC		; 0x200002BC
+3001E8F0  FFFFFFFF		; 0x080768F5
+3001E8F4  200002A7		; 0x200002A7
+3001E8F8  200002BC		; 0x200002BC
 
 END_PROGRAM
 **************************************************
@@ -1056,15 +1006,15 @@ END_PROGRAM
 (-) UDINT
 #5			sysCfgAnalogRes	{LNXT:4|7|-1}
 (*) USINT
-3000052C  2010     		mov r0, #16 ; 16
-3000052E  F8DF 40BC		ldr r4, [pc, #+188] ; 0x807D611
-30000532  F044 0401		orr r4, r4, #1
-30000536  47A0     		blx r4
+3001E8FC  2010     		mov r0, #16 ; 16
+3001E8FE  F8DF 40BC		ldr r4, [pc, #+188] ; 0x807D611
+3001E902  F044 0401		orr r4, r4, #1
+3001E906  47A0     		blx r4
 
 #6			ST		warningsKiller	{LNXT:4|7|-1}
 (*) BOOL
-30000538  F8DF 70B8		ldr r7, [pc, #+184] ; 0x200002A4
-3000053C  7038     		strb r0, [r7]
+3001E908  F8DF 70B8		ldr r7, [pc, #+184] ; 0x200002A4
+3001E90C  7038     		strb r0, [r7]
 
 #7		
 #8			(* warningsKiller := sysCfgProgInput(0, 0); *)
@@ -1072,16 +1022,16 @@ END_PROGRAM
 (-) BOOL
 #10			sysCfgProgInput		0	{LNXT:7|8|-1}
 (*) USINT
-3000053E  2000     		mov r0, #0 ; 0
-30000540  2100     		mov r1, #0 ; 0
-30000542  F8DF 40AC		ldr r4, [pc, #+172] ; 0x807D61D
-30000546  F044 0401		orr r4, r4, #1
-3000054A  47A0     		blx r4
+3001E90E  2000     		mov r0, #0 ; 0
+3001E910  2100     		mov r1, #0 ; 0
+3001E912  F8DF 40AC		ldr r4, [pc, #+172] ; 0x807D61D
+3001E916  F044 0401		orr r4, r4, #1
+3001E91A  47A0     		blx r4
 
 #11			ST		warningsKiller	{LNXT:7|8|-1}
 (*) BOOL
-3000054C  F8DF 70A4		ldr r7, [pc, #+164] ; 0x200002A4
-30000550  7038     		strb r0, [r7]
+3001E91C  F8DF 70A4		ldr r7, [pc, #+164] ; 0x200002A4
+3001E920  7038     		strb r0, [r7]
 
 #12		
 #13			(* warningsKiller := sysCfgProgInput(1, 0); *)
@@ -1089,16 +1039,16 @@ END_PROGRAM
 (-) BOOL
 #15			sysCfgProgInput		0	{LNXT:8|9|-1}
 (*) USINT
-30000552  2001     		mov r0, #1 ; 1
-30000554  2100     		mov r1, #0 ; 0
-30000556  F8DF 4098		ldr r4, [pc, #+152] ; 0x807D61D
-3000055A  F044 0401		orr r4, r4, #1
-3000055E  47A0     		blx r4
+3001E922  2001     		mov r0, #1 ; 1
+3001E924  2100     		mov r1, #0 ; 0
+3001E926  F8DF 4098		ldr r4, [pc, #+152] ; 0x807D61D
+3001E92A  F044 0401		orr r4, r4, #1
+3001E92E  47A0     		blx r4
 
 #16			ST		warningsKiller	{LNXT:8|9|-1}
 (*) BOOL
-30000560  F8DF 7090		ldr r7, [pc, #+144] ; 0x200002A4
-30000564  7038     		strb r0, [r7]
+3001E930  F8DF 7090		ldr r7, [pc, #+144] ; 0x200002A4
+3001E934  7038     		strb r0, [r7]
 
 #17		
 #18			(* warningsKiller := sysCfgProgInput(2, 0); *)
@@ -1106,16 +1056,16 @@ END_PROGRAM
 (-) BOOL
 #20			sysCfgProgInput		0	{LNXT:9|10|-1}
 (*) USINT
-30000566  2002     		mov r0, #2 ; 2
-30000568  2100     		mov r1, #0 ; 0
-3000056A  F8DF 4084		ldr r4, [pc, #+132] ; 0x807D61D
-3000056E  F044 0401		orr r4, r4, #1
-30000572  47A0     		blx r4
+3001E936  2002     		mov r0, #2 ; 2
+3001E938  2100     		mov r1, #0 ; 0
+3001E93A  F8DF 4084		ldr r4, [pc, #+132] ; 0x807D61D
+3001E93E  F044 0401		orr r4, r4, #1
+3001E942  47A0     		blx r4
 
 #21			ST		warningsKiller	{LNXT:9|10|-1}
 (*) BOOL
-30000574  F8DF 707C		ldr r7, [pc, #+124] ; 0x200002A4
-30000578  7038     		strb r0, [r7]
+3001E944  F8DF 707C		ldr r7, [pc, #+124] ; 0x200002A4
+3001E948  7038     		strb r0, [r7]
 
 #22		
 #23			(* warningsKiller := sysCfgProgInput(3, 0); *)
@@ -1123,16 +1073,16 @@ END_PROGRAM
 (-) BOOL
 #25			sysCfgProgInput		0	{LNXT:10|11|-1}
 (*) USINT
-3000057A  2003     		mov r0, #3 ; 3
-3000057C  2100     		mov r1, #0 ; 0
-3000057E  F8DF 4070		ldr r4, [pc, #+112] ; 0x807D61D
-30000582  F044 0401		orr r4, r4, #1
-30000586  47A0     		blx r4
+3001E94A  2003     		mov r0, #3 ; 3
+3001E94C  2100     		mov r1, #0 ; 0
+3001E94E  F8DF 4070		ldr r4, [pc, #+112] ; 0x807D61D
+3001E952  F044 0401		orr r4, r4, #1
+3001E956  47A0     		blx r4
 
 #26			ST		warningsKiller	{LNXT:10|11|-1}
 (*) BOOL
-30000588  F8DF 7068		ldr r7, [pc, #+104] ; 0x200002A4
-3000058C  7038     		strb r0, [r7]
+3001E958  F8DF 7068		ldr r7, [pc, #+104] ; 0x200002A4
+3001E95C  7038     		strb r0, [r7]
 
 #27		
 #28			(* warningsKiller := sysCfgProgInput(4, 0); *)
@@ -1140,16 +1090,16 @@ END_PROGRAM
 (-) BOOL
 #30			sysCfgProgInput		0	{LNXT:11|12|-1}
 (*) USINT
-3000058E  2004     		mov r0, #4 ; 4
-30000590  2100     		mov r1, #0 ; 0
-30000592  F8DF 405C		ldr r4, [pc, #+92] ; 0x807D61D
-30000596  F044 0401		orr r4, r4, #1
-3000059A  47A0     		blx r4
+3001E95E  2004     		mov r0, #4 ; 4
+3001E960  2100     		mov r1, #0 ; 0
+3001E962  F8DF 405C		ldr r4, [pc, #+92] ; 0x807D61D
+3001E966  F044 0401		orr r4, r4, #1
+3001E96A  47A0     		blx r4
 
 #31			ST		warningsKiller	{LNXT:11|12|-1}
 (*) BOOL
-3000059C  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002A4
-300005A0  7038     		strb r0, [r7]
+3001E96C  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002A4
+3001E970  7038     		strb r0, [r7]
 
 #32		
 #33			(* warningsKiller := sysCfgProgInput(5, 0); *)
@@ -1157,16 +1107,16 @@ END_PROGRAM
 (-) BOOL
 #35			sysCfgProgInput		0	{LNXT:12|13|-1}
 (*) USINT
-300005A2  2005     		mov r0, #5 ; 5
-300005A4  2100     		mov r1, #0 ; 0
-300005A6  F8DF 4048		ldr r4, [pc, #+72] ; 0x807D61D
-300005AA  F044 0401		orr r4, r4, #1
-300005AE  47A0     		blx r4
+3001E972  2005     		mov r0, #5 ; 5
+3001E974  2100     		mov r1, #0 ; 0
+3001E976  F8DF 4048		ldr r4, [pc, #+72] ; 0x807D61D
+3001E97A  F044 0401		orr r4, r4, #1
+3001E97E  47A0     		blx r4
 
 #36			ST		warningsKiller	{LNXT:12|13|-1}
 (*) BOOL
-300005B0  F8DF 7040		ldr r7, [pc, #+64] ; 0x200002A4
-300005B4  7038     		strb r0, [r7]
+3001E980  F8DF 7040		ldr r7, [pc, #+64] ; 0x200002A4
+3001E984  7038     		strb r0, [r7]
 
 #37		
 #38			(* warningsKiller := sysCfgProgInput(6, 0); *)
@@ -1174,16 +1124,16 @@ END_PROGRAM
 (-) BOOL
 #40			sysCfgProgInput		0	{LNXT:13|14|-1}
 (*) USINT
-300005B6  2006     		mov r0, #6 ; 6
-300005B8  2100     		mov r1, #0 ; 0
-300005BA  F8DF 4034		ldr r4, [pc, #+52] ; 0x807D61D
-300005BE  F044 0401		orr r4, r4, #1
-300005C2  47A0     		blx r4
+3001E986  2006     		mov r0, #6 ; 6
+3001E988  2100     		mov r1, #0 ; 0
+3001E98A  F8DF 4034		ldr r4, [pc, #+52] ; 0x807D61D
+3001E98E  F044 0401		orr r4, r4, #1
+3001E992  47A0     		blx r4
 
 #41			ST		warningsKiller	{LNXT:13|14|-1}
 (*) BOOL
-300005C4  F8DF 702C		ldr r7, [pc, #+44] ; 0x200002A4
-300005C8  7038     		strb r0, [r7]
+3001E994  F8DF 702C		ldr r7, [pc, #+44] ; 0x200002A4
+3001E998  7038     		strb r0, [r7]
 
 #42		
 #43			(* warningsKiller := sysCfgProgInput(7, 0); *)
@@ -1191,26 +1141,26 @@ END_PROGRAM
 (-) BOOL
 #45			sysCfgProgInput		0	{LNXT:14|4|-1}
 (*) USINT
-300005CA  2007     		mov r0, #7 ; 7
-300005CC  2100     		mov r1, #0 ; 0
-300005CE  F8DF 4020		ldr r4, [pc, #+32] ; 0x807D61D
-300005D2  F044 0401		orr r4, r4, #1
-300005D6  47A0     		blx r4
+3001E99A  2007     		mov r0, #7 ; 7
+3001E99C  2100     		mov r1, #0 ; 0
+3001E99E  F8DF 4020		ldr r4, [pc, #+32] ; 0x807D61D
+3001E9A2  F044 0401		orr r4, r4, #1
+3001E9A6  47A0     		blx r4
 
 #46			ST		warningsKiller	{LNXT:14|4|-1}
 (*) BOOL
-300005D8  F8DF 7018		ldr r7, [pc, #+24] ; 0x200002A4
-300005DC  7038     		strb r0, [r7]
+3001E9A8  F8DF 7018		ldr r7, [pc, #+24] ; 0x200002A4
+3001E9AC  7038     		strb r0, [r7]
 
-300005DE  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-300005E2  F8DD E000		ldr lr, [sp]
-300005E6  B002     		add sp, sp, #8
+3001E9AE  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E9B2  F8DD E000		ldr lr, [sp]
+3001E9B6  B002     		add sp, sp, #8
 
-300005E8  4770     		bx lr
+3001E9B8  4770     		bx lr
 
-300005EC  FFFFFFFF		; 0x0807D611
-300005F0  FFFFFFFF		; 0x0807D61D
-300005F4  200002A4		; 0x200002A4
+3001E9BC  FFFFFFFF		; 0x0807D611
+3001E9C0  FFFFFFFF		; 0x0807D61D
+3001E9C4  200002A4		; 0x200002A4
 
 END_PROGRAM
 
@@ -1221,11 +1171,11 @@ END_PROGRAM
 
 
 *** INPUT:
-300005F8  4770     		bx lr
+3001E9C8  4770     		bx lr
 
 
 *** OUTPUT:
-300005FA  4770     		bx lr
+3001E9CA  4770     		bx lr
 
 
 
@@ -1233,15 +1183,15 @@ END_PROGRAM
 	Task Init init code
 **************************************************
 
-300005FC  B082     		sub sp, sp, #8
-300005FE  F8CD E000		str lr, [sp]
-30000602  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E9CC  B082     		sub sp, sp, #8
+3001E9CE  F8CD E000		str lr, [sp]
+3001E9D2  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
-30000606  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-3000060A  F8DD E000		ldr lr, [sp]
-3000060E  B002     		add sp, sp, #8
+3001E9D6  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E9DA  F8DD E000		ldr lr, [sp]
+3001E9DE  B002     		add sp, sp, #8
 
-30000610  4770     		bx lr
+3001E9E0  4770     		bx lr
 
 
 
@@ -1249,56 +1199,56 @@ END_PROGRAM
 	Global init code
 **************************************************
 
-30000620  B082     		sub sp, sp, #8
-30000622  F8CD E000		str lr, [sp]
-30000626  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001E9F0  B082     		sub sp, sp, #8
+3001E9F2  F8CD E000		str lr, [sp]
+3001E9F6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
 Var init: V:MAIN:UNITTICKS = 10
-3000062A  F8DF 0050		ldr r0, [pc, #+80] ; 0xA
-3000062E  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002AA
-30000632  8038     		strh r0, [r7]
+3001E9FA  F8DF 0050		ldr r0, [pc, #+80] ; 0xA
+3001E9FE  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002AA
+3001EA02  8038     		strh r0, [r7]
 
 Var init: V:MAIN:LASTDIR = 2
-30000634  F8DF 0040		ldr r0, [pc, #+64] ; 0x2
-30000638  F8DF 7050		ldr r7, [pc, #+80] ; 0x200002B4
-3000063C  8038     		strh r0, [r7]
+3001EA04  F8DF 0040		ldr r0, [pc, #+64] ; 0x2
+3001EA08  F8DF 7050		ldr r7, [pc, #+80] ; 0x200002B4
+3001EA0C  8038     		strh r0, [r7]
 
-Var init: V:MAIN:NEXTDIR = 1
-3000063E  F8DF 0034		ldr r0, [pc, #+52] ; 0x1
-30000642  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002C2
-30000646  8038     		strh r0, [r7]
+Var init: V::NEXTDIR = 1
+3001EA0E  F8DF 0034		ldr r0, [pc, #+52] ; 0x1
+3001EA12  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002C2
+3001EA16  8038     		strh r0, [r7]
 
 Var init: V:MAIN:DEADTIMEUNITS = 2
-30000648  F8DF 002C		ldr r0, [pc, #+44] ; 0x2
-3000064C  F8DF 7038		ldr r7, [pc, #+56] ; 0x200002B2
-30000650  8038     		strh r0, [r7]
+3001EA18  F8DF 002C		ldr r0, [pc, #+44] ; 0x2
+3001EA1C  F8DF 7038		ldr r7, [pc, #+56] ; 0x200002B2
+3001EA20  8038     		strh r0, [r7]
 
 Var init: V:MAIN:OPENTIMEUNITS = 1800
-30000652  F8DF 002C		ldr r0, [pc, #+44] ; 0x708
-30000656  F8DF 7038		ldr r7, [pc, #+56] ; 0x200002B6
-3000065A  8038     		strh r0, [r7]
+3001EA22  F8DF 002C		ldr r0, [pc, #+44] ; 0x708
+3001EA26  F8DF 7038		ldr r7, [pc, #+56] ; 0x200002B6
+3001EA2A  8038     		strh r0, [r7]
 
 Var init: V:MAIN:CLOSETIMEUNITS = 1800
-3000065C  F8DF 0020		ldr r0, [pc, #+32] ; 0x708
-30000660  F8DF 7030		ldr r7, [pc, #+48] ; 0x200002B8
-30000664  8038     		strh r0, [r7]
+3001EA2C  F8DF 0020		ldr r0, [pc, #+32] ; 0x708
+3001EA30  F8DF 7030		ldr r7, [pc, #+48] ; 0x200002B8
+3001EA34  8038     		strh r0, [r7]
 
-30000666  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-3000066A  F8DD E000		ldr lr, [sp]
-3000066E  B002     		add sp, sp, #8
+3001EA36  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001EA3A  F8DD E000		ldr lr, [sp]
+3001EA3E  B002     		add sp, sp, #8
 
-30000670  4770     		bx lr
+3001EA40  4770     		bx lr
 
-30000674  00000001		; 0x00000001
-30000678  00000002		; 0x00000002
-3000067C  0000000A		; 0x0000000A
-30000680  00000708		; 0x00000708
-30000684  200002AA		; 0x200002AA
-30000688  200002B2		; 0x200002B2
-3000068C  200002B4		; 0x200002B4
-30000690  200002B6		; 0x200002B6
-30000694  200002B8		; 0x200002B8
-30000698  200002C2		; 0x200002C2
+3001EA44  00000001		; 0x00000001
+3001EA48  00000002		; 0x00000002
+3001EA4C  0000000A		; 0x0000000A
+3001EA50  00000708		; 0x00000708
+3001EA54  200002AA		; 0x200002AA
+3001EA58  200002B2		; 0x200002B2
+3001EA5C  200002B4		; 0x200002B4
+3001EA60  200002B6		; 0x200002B6
+3001EA64  200002B8		; 0x200002B8
+3001EA68  200002C2		; 0x200002C2
 
 
 
@@ -1306,15 +1256,15 @@ Var init: V:MAIN:CLOSETIMEUNITS = 1800
 	Global RETAIN init code
 **************************************************
 
-3000069C  B082     		sub sp, sp, #8
-3000069E  F8CD E000		str lr, [sp]
-300006A2  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001EA6C  B082     		sub sp, sp, #8
+3001EA6E  F8CD E000		str lr, [sp]
+3001EA72  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
-300006A6  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-300006AA  F8DD E000		ldr lr, [sp]
-300006AE  B002     		add sp, sp, #8
+3001EA76  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001EA7A  F8DD E000		ldr lr, [sp]
+3001EA7E  B002     		add sp, sp, #8
 
-300006B0  4770     		bx lr
+3001EA80  4770     		bx lr
 
 
 
@@ -1322,15 +1272,15 @@ Var init: V:MAIN:CLOSETIMEUNITS = 1800
 	Task $$VirtualTables init code
 **************************************************
 
-300006B2  B082     		sub sp, sp, #8
-300006B4  F8CD E000		str lr, [sp]
-300006B8  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001EA82  B082     		sub sp, sp, #8
+3001EA84  F8CD E000		str lr, [sp]
+3001EA88  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
 
-300006BC  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
-300006C0  F8DD E000		ldr lr, [sp]
-300006C4  B002     		add sp, sp, #8
+3001EA8C  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3001EA90  F8DD E000		ldr lr, [sp]
+3001EA94  B002     		add sp, sp, #8
 
-300006C6  4770     		bx lr
+3001EA96  4770     		bx lr
 
 
 
@@ -1339,9 +1289,9 @@ MEMORY MAP
 ********************************************
 
 Code area type:          		       main code
-Start code area:          		0000000030000000h
-End code area:            		00000000300007CCh
-Code size:                		000007CCh
+Start code area:          		000000003001E400h
+End code area:            		000000003001EB7Ch
+Code size:                		0000077Ch
 
 Start local data area:    		0000000020000298h
 End local data area:      		00000000200002C4h
@@ -1358,7 +1308,7 @@ Bit data size:            		00000000h
 
 
 ********************************************
-CODE ID:                                8EA09791
-DEBUG MEMO ID:                          300002EE
+CODE ID:                                0CB87AEA
+DEBUG MEMO ID:                          3001E6EE
 FULL MEMO ID:                           00008F26
 ********************************************
