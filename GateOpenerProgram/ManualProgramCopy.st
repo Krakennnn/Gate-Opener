@@ -1,5 +1,9 @@
 (*
-Gate control with ONE button and NO limit switches.
+Decided to leave the program unchanged even though I switched the wiring to not use PLC relays 3 and 4. 
+Saving these for future additions like a lock 
+But will just let them actuate with this version of the program for now. They just won't do anything
+
+Gate control with ONE pushbutton and 12v wireless remote plus NO limit switches or lock in this version
 
 GateState:
 0 = STOPPED
@@ -16,9 +20,20 @@ NextDir:
 2 = close next
 *)
 
-(* ---------- Rising edge detection ---------- *)
-RF_Pulse := RF_Input AND NOT RF_Last;
-RF_Last := RF_Input;
+(*Send Data to Modbus Parameters For Ignition*)
+CloseRelay_Mod := CloseRelay;
+OpenRelay_Mod := OpenRelay;
+MoveUnits_Mod := MoveUnits;
+GateLocked_Mod := GateLocked;
+RF_Input_Mod := RF_Input;
+
+(* ---------- Rising edge detection (RF or Ignition) ---------- *)
+// Combines physical RF input and Ignition HMI signal into a single combined state
+Combined_Input := RF_Input OR IgnitionStartSignal_Mod;
+
+// Detect rising edge from either input source
+RF_Pulse := Combined_Input AND NOT RF_Last;
+RF_Last := Combined_Input;
 
 (* ---------- Latch button press so it cannot be missed ---------- *)
 IF RF_Pulse THEN
@@ -121,19 +136,10 @@ CASE GateState OF
     2:  (* OPENING *)
         OpenRelay    := TRUE;
         CloseRelay   := FALSE;
-        OpenRelay_2  := TRUE;
-        CloseRelay_2 := FALSE;
-
     3:  (* CLOSING *)
         OpenRelay    := FALSE;
         CloseRelay   := TRUE;
-        OpenRelay_2  := FALSE;
-        CloseRelay_2 := TRUE;
-
     ELSE
         OpenRelay    := FALSE;
         CloseRelay   := FALSE;
-        OpenRelay_2  := FALSE;
-        CloseRelay_2 := FALSE;
-
 END_CASE;
