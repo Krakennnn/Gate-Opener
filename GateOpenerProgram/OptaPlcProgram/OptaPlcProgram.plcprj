@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plcProject caseSensitive="false" extendedIdNames="false" useCustomWorkspace="true" debugMode="false" extcheck="true" SFCControl="false" strictPointerCheck="true" verboseWarningMode="false" iecTypeConversionRules="false" PNContactsOnEachNetwork="false" LocalVarsFBAccess="false" strictEnumsCheck="true" copyWarningThreshold="200" version="2.11" useLD2="true" useXPLCFiles="false" useFBMethods="false" customSortOfProjectTree="false" autoDerefPointers="false">
-	<image>Rev3.imgx</image>
+	<image>OptaPlcProgram.imgx</image>
 	<commSettings>Modbus:247,1000,M#COM:4,38400,N,8,1,H</commSettings>
 	<sources>
 		<main>
@@ -261,7 +261,7 @@ END_CASE;
 			<subranges/>
 			<interfaces/>
 		</main>
-		<target id="ArduinoOpta_1p3" name="Rev3.tgt" fullXml="false">
+		<target id="ArduinoOpta_1p3" name="OptaPlcProgram.tgt" fullXml="false">
 			<![CDATA[(************************************************************************)
 (*                                                                      *)
 (*	Description: Definition of target variables and functions           *)
@@ -457,7 +457,7 @@ FUNCTION sysSetEpochTime : BOOL
 END_FUNCTION
 ]]>
 		</target>
-		<targetXML name="Rev3.tgtx" fullXml="true">
+		<targetXML name="OptaPlcProgram.tgtx" fullXml="true">
 			<target>
 				<resources>
 					<resource name="ArduinoOpta" processor="ARMThumb2_VFP2">
@@ -5958,7 +5958,7 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="Rev3" nextID="206">
+			<root name="Rev3" nextID="224">
 				<Pou name="main" id="1"/>
 				<GlobalVars name="Global_vars" id="2"/>
 				<GlobalVars name="I_O_mappings_RelayOut" id="95"/>
