@@ -63,6 +63,9 @@
 					<var name="NextDir" type="INT">
 						<initValue>1</initValue>
 					</var>
+					<var name="Combined_Input" type="BOOL">
+						<initValue>false</initValue>
+					</var>
 				</group>
 				<group name="I_O_mappings_RelayOut" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="CloseRelay" type="BOOL">
@@ -75,6 +78,10 @@
 				<group name="I_O_mappings_ProgInp" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="RF_Input" type="BOOL">
 						<address type="I" typeVar="W" index="0" subIndex="0"/>
+					</var>
+					<var name="GateLocked" type="BOOL">
+						<descr>True=Unlocked</descr>
+						<address type="I" typeVar="X" index="0" subIndex="1"/>
 					</var>
 				</group>
 			</globalVars>
@@ -94,7 +101,7 @@
 			<functions/>
 			<functionBlocks/>
 			<programs>
-				<program name="main" version="1.0.0" creationDate="0" lastModifiedDate="1785752163" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<program name="main" version="1.0.0" creationDate="0" lastModifiedDate="1785795866" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
 					<vars/>
 					<iecDeclaration active="FALSE"/>
 					<sourceCode type="ST">
@@ -120,13 +127,20 @@ NextDir:
 2 = close next
 *)
 
+(*Send Data to Modbus Parameters For Ignition*)
 CloseRelay_Mod := CloseRelay;
 OpenRelay_Mod := OpenRelay;
 MoveUnits_Mod := MoveUnits;
+GateLocked_Mod := GateLocked;
+RF_Input_Mod := RF_Input;
 
-(* ---------- Rising edge detection ---------- *)
-RF_Pulse := RF_Input AND NOT RF_Last;
-RF_Last := RF_Input;
+(* ---------- Rising edge detection (RF or Ignition) ---------- *)
+// Combines physical RF input and Ignition HMI signal into a single combined state
+Combined_Input := RF_Input OR IgnitionStartSignal_Mod;
+
+// Detect rising edge from either input source
+RF_Pulse := Combined_Input AND NOT RF_Last;
+RF_Last := Combined_Input;
 
 (* ---------- Latch button press so it cannot be missed ---------- *)
 IF RF_Pulse THEN
@@ -5878,6 +5892,12 @@ After function block execution, unless an error occurred, you can use a subset o
 	OpenRelay_Mod AT %MW200.1 : BOOL;
 		{G:"Parameters"}
 	MoveUnits_Mod AT %MW200.2 : INT;
+		{G:"Parameters"}
+	RF_Input_Mod AT %MW200.3 : BOOL;
+		{G:"Parameters"}
+	GateLocked_Mod AT %MW200.4 : BOOL;
+		{G:"Parameters"}
+	IgnitionStartSignal_Mod AT %MW200.5 : BOOL;
 	END_VAR
 ]]>
 			</src>
@@ -5885,8 +5905,8 @@ After function block execution, unless an error occurred, you can use a subset o
 				<![CDATA[(* Automatically generated, do not edit! *)
 
 VAR_GLOBAL CONSTANT
-$$ParDB : ARRAY[ 0..119 ] OF USINT; { HIDDEN:ON } { INIT:"Rev3.PLK+0" }
-$$ParDBLength  : DWORD := 3; { HIDDEN:ON }
+$$ParDB : ARRAY[ 0..239 ] OF USINT; { HIDDEN:ON } { INIT:"Rev3.PLK+0" }
+$$ParDBLength  : DWORD := 6; { HIDDEN:ON }
 END_VAR
 
 PROGRAM InitParDB WITH Init;
@@ -5899,9 +5919,9 @@ PROGRAM InitParDB
 		dummyCrc32: UDINT;
 	END_VAR
 
-	dummyCrc32 := 2642176270;
+	dummyCrc32 := 1127119639;
 
-	warningsKiller := sysDBase_SetExtTable( TO_DWORD( ADR($$ParDB) ), $$ParDBLength, 200, TO_DWORD( ADR(%MW200.0) ), 3, 2, 201, 0, 0, 2, 2642176270 );
+	warningsKiller := sysDBase_SetExtTable( TO_DWORD( ADR($$ParDB) ), $$ParDBLength, 200, TO_DWORD( ADR(%MW200.0) ), 6, 2, 201, 0, 0, 2, 1127119639 );
 
 END_PROGRAM
 
@@ -5938,7 +5958,7 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="Rev3" nextID="190">
+			<root name="Rev3" nextID="206">
 				<Pou name="main" id="1"/>
 				<GlobalVars name="Global_vars" id="2"/>
 				<GlobalVars name="I_O_mappings_RelayOut" id="95"/>
@@ -6044,6 +6064,78 @@ END_PROGRAM
 								<shortname/>
 								<size>0</size>
 								<dataBlock>%MW200.2</dataBlock>
+								<subindex>0</subindex>
+							</param>
+							<param>
+								<ipa>16387</ipa>
+								<address>16387</address>
+								<name>RF_Input_Mod</name>
+								<typepar>0</typepar>
+								<typetarg>BOOL</typetarg>
+								<value>0</value>
+								<min/>
+								<max/>
+								<ipamin/>
+								<ipamax/>
+								<scale>1</scale>
+								<offs>0</offs>
+								<um/>
+								<description/>
+								<note/>
+								<form/>
+								<accesslevel>3</accesslevel>
+								<readonly>0</readonly>
+								<shortname/>
+								<size>0</size>
+								<dataBlock>%MW200.3</dataBlock>
+								<subindex>0</subindex>
+							</param>
+							<param>
+								<ipa>16388</ipa>
+								<address>16388</address>
+								<name>GateLocked_Mod</name>
+								<typepar>0</typepar>
+								<typetarg>BOOL</typetarg>
+								<value>0</value>
+								<min/>
+								<max/>
+								<ipamin/>
+								<ipamax/>
+								<scale>1</scale>
+								<offs>0</offs>
+								<um/>
+								<description/>
+								<note/>
+								<form/>
+								<accesslevel>3</accesslevel>
+								<readonly>0</readonly>
+								<shortname/>
+								<size>0</size>
+								<dataBlock>%MW200.4</dataBlock>
+								<subindex>0</subindex>
+							</param>
+							<param>
+								<ipa>16389</ipa>
+								<address>16389</address>
+								<name>IgnitionStartSignal_Mod</name>
+								<typepar>0</typepar>
+								<typetarg>BOOL</typetarg>
+								<value>0</value>
+								<min/>
+								<max/>
+								<ipamin/>
+								<ipamax/>
+								<scale>1</scale>
+								<offs>0</offs>
+								<um/>
+								<description/>
+								<note/>
+								<form/>
+								<accesslevel>3</accesslevel>
+								<readonly>0</readonly>
+								<shortname/>
+								<size>0</size>
+								<dataBlock>%MW200.5</dataBlock>
 								<subindex>0</subindex>
 							</param>
 						</params>
