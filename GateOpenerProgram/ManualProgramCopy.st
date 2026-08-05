@@ -20,12 +20,12 @@ NextDir:
 2 = close next
 *)
 
-(*Send Data to Modbus Parameters For Ignition*)
-CloseRelay_Mod := CloseRelay;
-OpenRelay_Mod := OpenRelay;
-MoveUnits_Mod := MoveUnits;
-GateLocked_Mod := GateLocked;
-RF_Input_Mod := RF_Input;
+(* Send Data to Modbus Parameters For Ignition *)
+CloseRelay_Mod   := CloseRelay;
+OpenRelay_Mod    := OpenRelay;
+MoveUnits_Mod    := MoveUnits;
+GateUnlocked_Mod := GateUnlocked;
+RF_Input_Mod     := RF_Input;
 
 (* ---------- Rising edge detection (RF or Ignition) ---------- *)
 // Combines physical RF input and Ignition HMI signal into a single combined state
@@ -33,11 +33,19 @@ Combined_Input := RF_Input OR IgnitionStartSignal_Mod;
 
 // Detect rising edge from either input source
 RF_Pulse := Combined_Input AND NOT RF_Last;
-RF_Last := Combined_Input;
+RF_Last  := Combined_Input;
 
-(* ---------- Latch button press so it cannot be missed ---------- *)
-IF RF_Pulse THEN
+(* ---------- Latch button press ONLY IF gate is unlocked ---------- *)
+IF RF_Pulse AND GateUnlocked THEN
     RF_Latched := TRUE;
+END_IF;
+
+(* ---------- Interlock: Force stop if lock is re-engaged ---------- *)
+IF NOT GateUnlocked THEN
+    GateState  := 0;      // Force state to STOPPED
+    MoveUnits  := 0;      // Reset motion counters
+    DeadUnits  := 0;
+    RF_Latched := FALSE;  // Clear any pending button triggers
 END_IF;
 
 
@@ -47,42 +55,40 @@ TickCount := TickCount + 1;
 IF TickCount >= UnitTicks THEN
     TickCount := 0;
 
-
     (* ---------- Button behavior ---------- *)
     IF RF_Latched THEN
         RF_Latched := FALSE;
 
-        CASE GateState OF
+        // Double-check lock state before executing transition
+        IF GateUnlocked THEN
+            CASE GateState OF
 
-            0:  (* stopped -> start opposite of last completed/commanded direction *)
+                0:  (* stopped -> start opposite of last completed/commanded direction *)
+                    IF LastDir = 1 THEN
+                        NextDir := 2;   (* last was open, next close *)
+                    ELSE
+                        NextDir := 1;   (* last was close, next open *)
+                    END_IF;
 
-                IF LastDir = 1 THEN
-                    NextDir := 2;   (* last was open, next close *)
-                ELSE
-                    NextDir := 1;   (* last was close, next open *)
-                END_IF;
+                    GateState := 1;     (* go to deadtime first *)
+                    DeadUnits := 0;
+                    MoveUnits := 0;
 
-                GateState := 1;     (* go to deadtime first *)
-                DeadUnits := 0;
-                MoveUnits := 0;
+                1:  (* already in deadtime -> ignore/cancel *)
+                    GateState := 0;
+                    DeadUnits := 0;
+                    MoveUnits := 0;
 
+                2:  (* opening -> stop *)
+                    GateState := 0;
+                    MoveUnits := 0;
 
-            1:  (* already in deadtime -> ignore/cancel *)
-                GateState := 0;
-                DeadUnits := 0;
-                MoveUnits := 0;
+                3:  (* closing -> stop *)
+                    GateState := 0;
+                    MoveUnits := 0;
 
-
-            2:  (* opening -> stop *)
-                GateState := 0;
-                MoveUnits := 0;
-
-
-            3:  (* closing -> stop *)
-                GateState := 0;
-                MoveUnits := 0;
-
-        END_CASE;
+            END_CASE;
+        END_IF;
     END_IF;
 
 
@@ -96,10 +102,10 @@ IF TickCount >= UnitTicks THEN
 
             IF NextDir = 1 THEN
                 GateState := 2;     (* opening *)
-                LastDir := 1;
+                LastDir   := 1;
             ELSE
                 GateState := 3;     (* closing *)
-                LastDir := 2;
+                LastDir   := 2;
             END_IF;
 
         END_IF;
@@ -134,12 +140,14 @@ END_IF;
 CASE GateState OF
 
     2:  (* OPENING *)
-        OpenRelay    := TRUE;
-        CloseRelay   := FALSE;
+        OpenRelay  := GateUnlocked; (* Double protection on outputs *)
+        CloseRelay := FALSE;
+
     3:  (* CLOSING *)
-        OpenRelay    := FALSE;
-        CloseRelay   := TRUE;
+        OpenRelay  := FALSE;
+        CloseRelay := GateUnlocked; (* Double protection on outputs *)
+
     ELSE
-        OpenRelay    := FALSE;
-        CloseRelay   := FALSE;
+        OpenRelay  := FALSE;
+        CloseRelay := FALSE;
 END_CASE;
